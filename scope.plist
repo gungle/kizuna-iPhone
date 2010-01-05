@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SERVER</key>
+	<string>http://localhost:3000</string>
+	<key>API_KEY_LOGIN</key>
+	<string>/logins.xml</string>
+	<key>API_KEY_STATUS</key>
+	<string>/statuses.xml</string>
+	<key>API_KEY_MAP</key>
+	<string>/maps.xml</string>
+	<key>API_KEY_USERS</key>
+	<string>/users.xml</string>
+	<key>API_KEY_REPORT_STATUS</key>
+	<string>/statuses</string>
+	<key>API_KEY_TWEETS</key>
+	<string>/tweets.xml</string>
+</dict>
+</plist>
