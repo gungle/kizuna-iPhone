@@ -12,6 +12,7 @@
 #import "StatusListXMLParser.h"
 #import "MapXMLParser.h"
 #import "AsyncImageView.h"
+#import "MapInfoViewController.h"
 
 #import "SCOPEProjectAppDelegate.h"
 
@@ -279,6 +280,11 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
 	NSLog(@"tap tap");
 	// 次の画面で画像表示またはこの画面でModalViewに画像表示
+	NSLog(@"---> mapView -- > %@", [(MapInfo *)view.annotation picturePath]);
+	MapInfoViewController *mapInfoViewController = [[MapInfoViewController alloc] initWithImagePath:[(MapInfo *)view.annotation picturePath]];
+	mapInfoViewController.title = @"詳細画像";
+	[self.navigationController pushViewController:mapInfoViewController animated:YES];
+	
 }
 
 - (void)dealloc {

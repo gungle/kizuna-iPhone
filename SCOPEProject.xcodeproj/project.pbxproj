@@ -28,6 +28,8 @@
 		2B3EE0B510C9051000923595 /* PositionReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3EE0B110C9051000923595 /* PositionReportViewController.xib */; };
 		2B3EE0B610C9051000923595 /* StatusReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3EE0B210C9051000923595 /* StatusReportViewController.xib */; };
 		2B3EE0B710C9051000923595 /* ReportViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B3EE0B310C9051000923595 /* ReportViewController.xib */; };
+		2B8F5DD810F59D9E00A7192A /* MapInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F5DD710F59D9E00A7192A /* MapInfoViewController.m */; };
+		2B8F5DF010F5A0D100A7192A /* MapInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F5DEF10F5A0D100A7192A /* MapInfoViewController.xib */; };
 		2B8F624910D8A82D008C678C /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F624810D8A82D008C678C /* CommonViewController.m */; };
 		2B918D0510CF7361008A9EF3 /* PropertiesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B918D0410CF7361008A9EF3 /* PropertiesUtil.m */; };
 		2B918D1410CF761C008A9EF3 /* LoginXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B918D1310CF761C008A9EF3 /* LoginXMLParser.m */; };
@@ -106,6 +108,9 @@
 		2B3EE0B110C9051000923595 /* PositionReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PositionReportViewController.xib; sourceTree = "<group>"; };
 		2B3EE0B210C9051000923595 /* StatusReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusReportViewController.xib; sourceTree = "<group>"; };
 		2B3EE0B310C9051000923595 /* ReportViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportViewController.xib; sourceTree = "<group>"; };
+		2B8F5DD610F59D9E00A7192A /* MapInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfoViewController.h; sourceTree = "<group>"; };
+		2B8F5DD710F59D9E00A7192A /* MapInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoViewController.m; sourceTree = "<group>"; };
+		2B8F5DEF10F5A0D100A7192A /* MapInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapInfoViewController.xib; sourceTree = "<group>"; };
 		2B8F624710D8A82D008C678C /* CommonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		2B8F624810D8A82D008C678C /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		2B918D0310CF7361008A9EF3 /* PropertiesUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertiesUtil.h; sourceTree = "<group>"; };
@@ -266,6 +271,7 @@
 				8D1107310486CEB800E47090 /* SCOPEProject-Info.plist */,
 				2B0463B010CCD66D0004365E /* scope.plist */,
 				2B03115610F319C9001FBDC9 /* UserListViewCell.xib */,
+				2B8F5DEF10F5A0D100A7192A /* MapInfoViewController.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -362,6 +368,8 @@
 				2BA4C88010C8A5D6005CE0C5 /* MapInfo.m */,
 				2BA4C88110C8A5D6005CE0C5 /* MapViewController.h */,
 				2BA4C88210C8A5D6005CE0C5 /* MapViewController.m */,
+				2B8F5DD610F59D9E00A7192A /* MapInfoViewController.h */,
+				2B8F5DD710F59D9E00A7192A /* MapInfoViewController.m */,
 			);
 			name = maps;
 			sourceTree = "<group>";
@@ -493,6 +501,7 @@
 				B36547D810E903D1005E7B02 /* TweetInput.xib in Resources */,
 				2B03114410F3142E001FBDC9 /* UserViewController.xib in Resources */,
 				2B03115710F319C9001FBDC9 /* UserListViewCell.xib in Resources */,
+				2B8F5DF010F5A0D100A7192A /* MapInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +549,7 @@
 				2B03114310F3142E001FBDC9 /* UserViewController.m in Sources */,
 				2B03115510F319A9001FBDC9 /* UserListViewCell.m in Sources */,
 				2B03115E10F31BFE001FBDC9 /* UserListViewController.m in Sources */,
+				2B8F5DD810F59D9E00A7192A /* MapInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,6 @@
 #import "MapViewController.h"
 #import "ReportViewController.h"
 #import "UserProfileViewController.h"
-
-#import "ScopeProjectAppDelegate.h"
 #import "StatusInfoViewCell.h"
 #import "StatusInfoTextViewController.h"
 
