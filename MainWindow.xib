@@ -57,6 +57,10 @@
 					<string key="IBUITitle">UserList</string>
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="297167332">
 						<string key="IBUITitle">ユーザ</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">users.png</string>
+						</object>
 						<reference key="IBUITabBar"/>
 					</object>
 					<reference key="IBUIParentViewController" ref="1034742383"/>

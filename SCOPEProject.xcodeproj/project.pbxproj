@@ -19,6 +19,7 @@
 		2B03115710F319C9001FBDC9 /* UserListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B03115610F319C9001FBDC9 /* UserListViewCell.xib */; };
 		2B03115E10F31BFE001FBDC9 /* UserListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B03115D10F31BFE001FBDC9 /* UserListViewController.m */; };
 		2B0463B110CCD66D0004365E /* scope.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B0463B010CCD66D0004365E /* scope.plist */; };
+		2B14DA2910F721D9004A3BB6 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B14DA2810F721D9004A3BB6 /* status.png */; };
 		2B23694D10CE35E400B6FB4C /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B23694C10CE35E400B6FB4C /* Settings.bundle */; };
 		2B3EE09410C9032D00923595 /* NoteReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EE08D10C9032D00923595 /* NoteReportViewController.m */; };
 		2B3EE09510C9032D00923595 /* PositionReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3EE08F10C9032D00923595 /* PositionReportViewController.m */; };
@@ -47,7 +48,7 @@
 		2BA2E99110E06C7600CE1D11 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E98C10E06C7600CE1D11 /* location.png */; };
 		2BA2E99210E06C7600CE1D11 /* microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E98D10E06C7600CE1D11 /* microphone.png */; };
 		2BA2E99310E06C7600CE1D11 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E98E10E06C7600CE1D11 /* pin.png */; };
-		2BA2E99410E06C7600CE1D11 /* status.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E98F10E06C7600CE1D11 /* status.png */; };
+		2BA2E99410E06C7600CE1D11 /* users.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E98F10E06C7600CE1D11 /* users.png */; };
 		2BA2E99510E06C7600CE1D11 /* tweet.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA2E99010E06C7600CE1D11 /* tweet.png */; };
 		2BA4C89E10C8A5D6005CE0C5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4C87E10C8A5D6005CE0C5 /* AsyncImageView.m */; };
 		2BA4C89F10C8A5D6005CE0C5 /* MapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA4C88010C8A5D6005CE0C5 /* MapInfo.m */; };
@@ -95,6 +96,7 @@
 		2B03115C10F31BFE001FBDC9 /* UserListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserListViewController.h; sourceTree = "<group>"; };
 		2B03115D10F31BFE001FBDC9 /* UserListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserListViewController.m; sourceTree = "<group>"; };
 		2B0463B010CCD66D0004365E /* scope.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scope.plist; sourceTree = "<group>"; };
+		2B14DA2810F721D9004A3BB6 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
 		2B23694C10CE35E400B6FB4C /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		2B3EE08C10C9032D00923595 /* NoteReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteReportViewController.h; sourceTree = "<group>"; };
 		2B3EE08D10C9032D00923595 /* NoteReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteReportViewController.m; sourceTree = "<group>"; };
@@ -140,7 +142,7 @@
 		2BA2E98C10E06C7600CE1D11 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
 		2BA2E98D10E06C7600CE1D11 /* microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphone.png; sourceTree = "<group>"; };
 		2BA2E98E10E06C7600CE1D11 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
-		2BA2E98F10E06C7600CE1D11 /* status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = status.png; sourceTree = "<group>"; };
+		2BA2E98F10E06C7600CE1D11 /* users.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = users.png; sourceTree = "<group>"; };
 		2BA2E99010E06C7600CE1D11 /* tweet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tweet.png; sourceTree = "<group>"; };
 		2BA4C87D10C8A5D6005CE0C5 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		2BA4C87E10C8A5D6005CE0C5 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
@@ -331,10 +333,11 @@
 		2BA2E98410E06C3900CE1D11 /* tabbaritem */ = {
 			isa = PBXGroup;
 			children = (
+				2B14DA2810F721D9004A3BB6 /* status.png */,
 				2BA2E98C10E06C7600CE1D11 /* location.png */,
 				2BA2E98D10E06C7600CE1D11 /* microphone.png */,
 				2BA2E98E10E06C7600CE1D11 /* pin.png */,
-				2BA2E98F10E06C7600CE1D11 /* status.png */,
+				2BA2E98F10E06C7600CE1D11 /* users.png */,
 				2BA2E99010E06C7600CE1D11 /* tweet.png */,
 			);
 			name = tabbaritem;
@@ -495,13 +498,14 @@
 				2BA2E99110E06C7600CE1D11 /* location.png in Resources */,
 				2BA2E99210E06C7600CE1D11 /* microphone.png in Resources */,
 				2BA2E99310E06C7600CE1D11 /* pin.png in Resources */,
-				2BA2E99410E06C7600CE1D11 /* status.png in Resources */,
+				2BA2E99410E06C7600CE1D11 /* users.png in Resources */,
 				2BA2E99510E06C7600CE1D11 /* tweet.png in Resources */,
 				B36547D710E903D1005E7B02 /* TweetListCell.xib in Resources */,
 				B36547D810E903D1005E7B02 /* TweetInput.xib in Resources */,
 				2B03114410F3142E001FBDC9 /* UserViewController.xib in Resources */,
 				2B03115710F319C9001FBDC9 /* UserListViewCell.xib in Resources */,
 				2B8F5DF010F5A0D100A7192A /* MapInfoViewController.xib in Resources */,
+				2B14DA2910F721D9004A3BB6 /* status.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
