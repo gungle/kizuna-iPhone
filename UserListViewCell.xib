@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
+			<integer value="3"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -48,7 +48,7 @@
 							<object class="IBUIImageView" id="1013340578">
 								<reference key="NSNextResponder" ref="872781864"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{4, 6}, {48, 48}}</string>
+								<string key="NSFrame">{{4, 5}, {48, 48}}</string>
 								<reference key="NSSuperview" ref="872781864"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -64,7 +64,7 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">fullName</string>
-								<object class="NSFont" key="IBUIFont" id="114707176">
+								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">HiraKakuPro-W3</string>
 									<double key="NSSize">18</double>
 									<int key="NSfFlags">16</int>
@@ -80,14 +80,40 @@
 							<object class="IBUILabel" id="761489296">
 								<reference key="NSNextResponder" ref="872781864"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{179, 6}, {121, 22}}</string>
+								<string key="NSFrame">{{173, 6}, {121, 22}}</string>
 								<reference key="NSSuperview" ref="872781864"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">fullNameKana</string>
-								<reference key="IBUIFont" ref="114707176"/>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">HiraKakuPro-W3</string>
+									<double key="NSSize">14</double>
+									<int key="NSfFlags">16</int>
+								</object>
 								<reference key="IBUITextColor" ref="911099869"/>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">1</int>
+								<float key="IBUIMinimumFontSize">10</float>
+							</object>
+							<object class="IBUILabel" id="468776941">
+								<reference key="NSNextResponder" ref="872781864"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{60, 31}, {246, 18}}</string>
+								<reference key="NSSuperview" ref="872781864"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="IBUIText">address</string>
+								<object class="NSFont" key="IBUIFont">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">13</double>
+									<int key="NSfFlags">16</int>
+								</object>
+								<object class="NSColor" key="IBUITextColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC40IDAuNCAwLjQAA</bytes>
+								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
@@ -159,6 +185,14 @@
 					</object>
 					<int key="connectionID">12</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">address</string>
+						<reference key="source" ref="899238520"/>
+						<reference key="destination" ref="468776941"/>
+					</object>
+					<int key="connectionID">14</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -188,6 +222,7 @@
 							<reference ref="1013340578"/>
 							<reference ref="404780175"/>
 							<reference ref="761489296"/>
+							<reference ref="468776941"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -200,11 +235,19 @@
 						<int key="objectID">5</int>
 						<reference key="object" ref="404780175"/>
 						<reference key="parent" ref="899238520"/>
+						<string key="objectName">fullName</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
 						<reference key="object" ref="761489296"/>
 						<reference key="parent" ref="899238520"/>
+						<string key="objectName">fullNameKana</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">13</int>
+						<reference key="object" ref="468776941"/>
+						<reference key="parent" ref="899238520"/>
+						<string key="objectName">address</string>
 					</object>
 				</object>
 			</object>
@@ -214,6 +257,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
+					<string>13.IBPluginDependency</string>
 					<string>3.CustomClassName</string>
 					<string>3.IBEditorWindowLastContentRect</string>
 					<string>3.IBPluginDependency</string>
@@ -226,8 +270,9 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UserListViewController</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UserListViewCell</string>
-					<string>{{615, 567}, {320, 60}}</string>
+					<string>{{389, 160}, {320, 60}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>CommonImageView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -251,7 +296,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">12</int>
+			<int key="maxID">14</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -271,17 +316,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>blood</string>
+							<string>address</string>
 							<string>fullName</string>
 							<string>fullNameKana</string>
-							<string>sex</string>
-							<string>updatedAt</string>
 							<string>userIcon</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UILabel</string>
-							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UILabel</string>

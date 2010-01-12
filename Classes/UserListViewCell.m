@@ -13,9 +13,7 @@
 
 @synthesize fullName;
 @synthesize fullNameKana;
-@synthesize sex;
-@synthesize blood;
-@synthesize updatedAt;
+@synthesize address;
 @synthesize userIcon;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -37,10 +35,8 @@
 - (void)dealloc {
 	[fullName     release];
 	[fullNameKana release];
-	[sex          release];
-	[blood        release];
+	[address      release];
 	[userIcon     release];
-	[updatedAt    release];
     [super        dealloc];
 }
 

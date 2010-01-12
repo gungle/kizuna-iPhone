@@ -12,17 +12,13 @@
 @interface UserListViewCell : UITableViewCell {
 	UILabel         *fullName;      // 氏名
 	UILabel         *fullNameKana;  // 氏名カナ
-	UILabel         *sex;           // 性別
-	UILabel         *blood;         // 血液型
-	UILabel         *updatedAt;     // 更新日時
+	UILabel         *address;		// 住所
 	CommonImageView *userIcon;      // アイコン
 }
 
 @property (nonatomic, retain) IBOutlet UILabel         *fullName;
 @property (nonatomic, retain) IBOutlet UILabel         *fullNameKana;
-@property (nonatomic, retain) IBOutlet UILabel         *sex;
-@property (nonatomic, retain) IBOutlet UILabel         *blood;
-@property (nonatomic, retain) IBOutlet UILabel         *updatedAt;
+@property (nonatomic, retain) IBOutlet UILabel         *address;
 @property (nonatomic, retain) IBOutlet CommonImageView *userIcon;
 
 @end

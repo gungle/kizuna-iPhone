@@ -120,14 +120,11 @@
 	[cell.userIcon addSubview:asyncImageView];
 	[asyncImageView release];
 	// 氏名
-	[cell.fullName setText:[[items objectAtIndex:personIndex] fullName]];
+	[cell.fullName setText:(NSString *)[[items objectAtIndex:personIndex] fullName]];
 	// 氏名カナ
-	[cell.fullNameKana setText:[[items objectAtIndex:personIndex] fullNameKana]];
-	// 性別
-	[cell.sex setText:[[items objectAtIndex:personIndex] sex]];
-	// 血液型
-	[cell.blood setText:[[items objectAtIndex:personIndex] blood]];
-	
+	[cell.fullNameKana setText:(NSString *)[[items objectAtIndex:personIndex] fullNameKana]];
+	// 住所
+	[cell.address setText:(NSString *)[[items objectAtIndex:personIndex] address]];
     return cell;
 }
 
