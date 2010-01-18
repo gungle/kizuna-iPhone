@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05663A0611041EFB004AC52A /* dist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05663A0511041EFB004AC52A /* dist.plist */; };
 		1D3623260D0F684500981E51 /* SCOPEProjectAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SCOPEProjectAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -78,10 +79,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05521DA611042C0100C3A663 /* SCOPEProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCOPEProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05663A0511041EFB004AC52A /* dist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dist.plist; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* SCOPEProjectAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOPEProjectAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* SCOPEProjectAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCOPEProjectAppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* SCOPEProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCOPEProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765070DF74369002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AB4B0D9B1048005BE974 /* SCOPEProject_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCOPEProject_Prefix.pch; sourceTree = "<group>"; };
@@ -224,7 +226,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* SCOPEProject.app */,
+				05521DA611042C0100C3A663 /* SCOPEProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +239,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				05663A0511041EFB004AC52A /* dist.plist */,
 			);
 			name = SCOPEProject;
 			sourceTree = "<group>";
@@ -456,7 +459,7 @@
 			);
 			name = SCOPEProject;
 			productName = SCOPEProject;
-			productReference = 1D6058910D05DD3D006BFB54 /* SCOPEProject.app */;
+			productReference = 05521DA611042C0100C3A663 /* SCOPEProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -506,6 +509,7 @@
 				2B03115710F319C9001FBDC9 /* UserListViewCell.xib in Resources */,
 				2B8F5DF010F5A0D100A7192A /* MapInfoViewController.xib in Resources */,
 				2B14DA2910F721D9004A3BB6 /* status.png in Resources */,
+				05663A0611041EFB004AC52A /* dist.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,11 +607,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = dist.plist;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Institute for HyperNetwork Society";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8A44C2F-33F8-44DA-A98D-1CEF658422E3";
 				SDKROOT = iphoneos3.1.2;
 			};
 			name = Release;
