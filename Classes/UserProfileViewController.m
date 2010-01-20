@@ -95,7 +95,6 @@
 	fullNameKana.text = userInfo.fullNameKana;
 	[groupValue1 addObject:userInfo.tel];
 	[groupValue1 addObject:userInfo.mail];
-	// TODO 住所がAPIにない
 	[groupValue1 addObject:userInfo.address];
 	[groupValue2 addObject:userInfo.birthday];
 	[groupValue2 addObject:userInfo.sex];

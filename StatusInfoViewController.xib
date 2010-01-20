@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="58"/>
+			<integer value="57"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -54,7 +54,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">名前</string>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">HiraKakuPro-W3</string>
+							<string key="NSName">Helvetica</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -77,9 +77,9 @@
 						<int key="IBUITag">20</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">名前カナ</string>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">HiraKakuPro-W3</string>
-							<double key="NSSize">11</double>
+						<object class="NSFont" key="IBUIFont" id="730116391">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">13</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<reference key="IBUITextColor" ref="9829290"/>
@@ -99,15 +99,15 @@
 					<object class="IBUIButton" id="697362803">
 						<reference key="NSNextResponder" ref="891423812"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 80}, {50, 25}}</string>
+						<string key="NSFrame">{{120, 77}, {50, 31}}</string>
 						<reference key="NSSuperview" ref="891423812"/>
 						<reference key="IBUIBackgroundColor" ref="877342469"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont" id="1018950273">
-							<string key="NSName">HiraKakuPro-W6</string>
+						<object class="NSFont" key="IBUIFont" id="261958766">
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -129,14 +129,14 @@
 					<object class="IBUIButton" id="792875165">
 						<reference key="NSNextResponder" ref="891423812"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{186, 80}, {72, 25}}</string>
+						<string key="NSFrame">{{186, 77}, {72, 31}}</string>
 						<reference key="NSSuperview" ref="891423812"/>
 						<reference key="IBUIBackgroundColor" ref="877342469"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="1018950273"/>
+						<reference key="IBUIFont" ref="261958766"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">現状報告</string>
 						<reference key="IBUIHighlightedTitleColor" ref="357452893"/>
@@ -166,17 +166,13 @@
 					<object class="IBUILabel" id="519895208">
 						<reference key="NSNextResponder" ref="891423812"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{17, 115}, {102, 21}}</string>
+						<string key="NSFrame">{{17, 118}, {102, 21}}</string>
 						<reference key="NSSuperview" ref="891423812"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">最終更新日時</string>
-						<object class="NSFont" key="IBUIFont" id="332553823">
-							<string key="NSName">HiraKakuPro-W3</string>
-							<double key="NSSize">14</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFont" ref="730116391"/>
 						<reference key="IBUITextColor" ref="9829290"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -185,13 +181,13 @@
 					<object class="IBUILabel" id="406004833">
 						<reference key="NSNextResponder" ref="891423812"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{153, 115}, {167, 22}}</string>
+						<string key="NSFrame">{{153, 118}, {167, 22}}</string>
 						<reference key="NSSuperview" ref="891423812"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">2009/12/31 23:59:59</string>
-						<reference key="IBUIFont" ref="332553823"/>
+						<reference key="IBUIFont" ref="730116391"/>
 						<reference key="IBUITextColor" ref="9829290"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -380,12 +376,12 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="792875165"/>
 							<reference ref="519895208"/>
-							<reference ref="406004833"/>
 							<reference ref="697362803"/>
 							<reference ref="104078018"/>
 							<reference ref="564020537"/>
 							<reference ref="340315704"/>
 							<reference ref="630606774"/>
+							<reference ref="406004833"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -464,7 +460,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>CommonScrollView</string>
-					<string>{{283, 76}, {320, 460}}</string>
+					<string>{{392, 76}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>
@@ -506,8 +502,16 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">StatusInfoViewController</string>
+					<string key="className">CommonViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/CommonViewController.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">StatusInfoViewController</string>
+					<string key="superclassName">CommonViewController</string>
 					<object class="NSMutableDictionary" key="actions">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
@@ -535,7 +539,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>tblView</string>
 							<string>updatedAt</string>
 							<string>userIcon</string>
-							<string>userId</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -547,7 +550,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 							<string>UITableView</string>
 							<string>UILabel</string>
 							<string>CommonImageView</string>
-							<string>NSString</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -637,7 +639,7 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="14197403">
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">Foundation.framework/Headers/NSURL.h</string>
 					</object>
@@ -675,32 +677,6 @@ AAMAAAABAAEAAAFTAAMAAAAEAAACAgAAAAAACAAIAAgACAABAAEAAQABA</bytes>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="605723647">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">UIKit.framework/Headers/UIResponder.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">Foundation.framework/Headers/NSPathUtilities.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">Foundation.framework/Headers/NSString.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<reference key="sourceIdentifier" ref="14197403"/>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSString</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">UIKit.framework/Headers/UIStringDrawing.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

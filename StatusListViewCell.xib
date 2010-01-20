@@ -57,15 +57,15 @@
 							<object class="IBUILabel" id="848065819">
 								<reference key="NSNextResponder" ref="306359299"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{60, 3}, {130, 15}}</string>
+								<string key="NSFrame">{{60, 3}, {130, 16}}</string>
 								<reference key="NSSuperview" ref="306359299"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">fullName</string>
-								<object class="NSFont" key="IBUIFont">
-									<string key="NSName">HiraKakuPro-W3</string>
-									<double key="NSSize">12</double>
+								<object class="NSFont" key="IBUIFont" id="158750975">
+									<string key="NSName">Helvetica</string>
+									<double key="NSSize">13</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="NSColor" key="IBUITextColor" id="201127226">
@@ -79,7 +79,7 @@
 							<object class="IBUILabel" id="759908313">
 								<reference key="NSNextResponder" ref="306359299"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{60, 19}, {100, 20}}</string>
+								<string key="NSFrame">{{60, 19}, {100, 22}}</string>
 								<reference key="NSSuperview" ref="306359299"/>
 								<object class="NSColor" key="IBUIBackgroundColor" id="992924222">
 									<int key="NSColorSpace">1</int>
@@ -89,8 +89,8 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">status</string>
-								<object class="NSFont" key="IBUIFont" id="985383127">
-									<string key="NSName">HiraKakuPro-W3</string>
+								<object class="NSFont" key="IBUIFont" id="584384100">
+									<string key="NSName">Helvetica</string>
 									<double key="NSSize">18</double>
 									<int key="NSfFlags">16</int>
 								</object>
@@ -103,14 +103,14 @@
 							<object class="IBUILabel" id="979235741">
 								<reference key="NSNextResponder" ref="306359299"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{168, 19}, {100, 20}}</string>
+								<string key="NSFrame">{{168, 19}, {100, 22}}</string>
 								<reference key="NSSuperview" ref="306359299"/>
 								<reference key="IBUIBackgroundColor" ref="992924222"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">position</string>
-								<reference key="IBUIFont" ref="985383127"/>
+								<reference key="IBUIFont" ref="584384100"/>
 								<reference key="IBUITextColor" ref="201127226"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
@@ -120,7 +120,7 @@
 							<object class="IBUILabel" id="68581835">
 								<reference key="NSNextResponder" ref="306359299"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{160, 38}, {120, 21}}</string>
+								<string key="NSFrame">{{135, 38}, {158, 21}}</string>
 								<reference key="NSSuperview" ref="306359299"/>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -130,6 +130,7 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">2009/11/27 23:59:59</string>
+								<reference key="IBUIFont" ref="158750975"/>
 								<object class="NSColor" key="IBUITextColor">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
@@ -308,7 +309,7 @@
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>StatusListViewCell</string>
-					<string>{{77, 696}, {320, 60}}</string>
+					<string>{{392, 696}, {320, 60}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>CommonImageView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

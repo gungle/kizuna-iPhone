@@ -53,8 +53,8 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont" id="839065103">
-							<string key="NSName">HiraKakuPro-W6</string>
+						<object class="NSFont" key="IBUIFont" id="469794682">
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">48</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -83,7 +83,7 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="839065103"/>
+						<reference key="IBUIFont" ref="469794682"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">非救助者</string>
 						<reference key="IBUIHighlightedTitleColor" ref="434869295"/>
@@ -103,7 +103,7 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="839065103"/>
+						<reference key="IBUIFont" ref="469794682"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">その他</string>
 						<reference key="IBUIHighlightedTitleColor" ref="434869295"/>
@@ -539,7 +539,7 @@
 			<integer value="3000" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">../Test.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">SCOPEProject.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">3.1</string>
 	</data>

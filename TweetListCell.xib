@@ -53,7 +53,7 @@
 									<object class="IBUILabel" id="102708116">
 										<reference key="NSNextResponder" ref="854511602"/>
 										<int key="NSvFlags">292</int>
-										<string key="NSFrame">{{201, 0}, {119, 21}}</string>
+										<string key="NSFrame">{{197, 0}, {119, 21}}</string>
 										<reference key="NSSuperview" ref="854511602"/>
 										<object class="NSColor" key="IBUIBackgroundColor" id="461321197">
 											<int key="NSColorSpace">1</int>
@@ -86,8 +86,8 @@
 										<bool key="IBUIUserInteractionEnabled">NO</bool>
 										<string key="IBUIText">fullName</string>
 										<object class="NSFont" key="IBUIFont">
-											<string key="NSName">HiraKakuPro-W3</string>
-											<double key="NSSize">12</double>
+											<string key="NSName">Helvetica</string>
+											<double key="NSSize">13</double>
 											<int key="NSfFlags">16</int>
 										</object>
 										<object class="NSColor" key="IBUITextColor" id="794475500">
@@ -162,9 +162,11 @@
 				<reference key="IBUIContentView" ref="77435885"/>
 			</object>
 			<object class="IBUIImageView" id="529968296">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
-				<string key="NSFrame">{{116, 576}, {240, 128}}</string>
+				<string key="NSFrameSize">{240, 128}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				<int key="IBUIContentMode">4</int>
@@ -284,6 +286,7 @@
 					<string>11.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
 					<string>15.IBPluginDependency</string>
+					<string>17.IBEditorWindowLastContentRect</string>
 					<string>17.IBPluginDependency</string>
 					<string>18.IBPluginDependency</string>
 					<string>2.CustomClassName</string>
@@ -298,10 +301,11 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{392, 1006}, {240, 128}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>TweetListCell</string>
-					<string>{{81, 604}, {320, 66}}</string>
+					<string>{{392, 604}, {320, 66}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>

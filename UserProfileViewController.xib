@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="8"/>
+			<integer value="27"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -83,6 +83,11 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Label</string>
+						<object class="NSFont" key="IBUIFont" id="1051374938">
+							<string key="NSName">Helvetica</string>
+							<double key="NSSize">18</double>
+							<int key="NSfFlags">16</int>
+						</object>
 						<object class="NSColor" key="IBUITextColor" id="96693649">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -94,12 +99,13 @@
 					<object class="IBUILabel" id="180002776">
 						<reference key="NSNextResponder" ref="419959003"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 50}, {190, 20}}</string>
+						<string key="NSFrame">{{120, 50}, {190, 22}}</string>
 						<reference key="NSSuperview" ref="419959003"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="IBUIText">Label</string>
+						<reference key="IBUIFont" ref="1051374938"/>
 						<reference key="IBUITextColor" ref="96693649"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -108,14 +114,14 @@
 					<object class="IBUIButton" id="590799701">
 						<reference key="NSNextResponder" ref="419959003"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 80}, {50, 25}}</string>
+						<string key="NSFrame">{{120, 77}, {50, 31}}</string>
 						<reference key="NSSuperview" ref="419959003"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">HiraKakuPro-W6</string>
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
 						</object>

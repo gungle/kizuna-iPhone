@@ -150,6 +150,7 @@
 		[userMapInfo release];		
 	} else {
 		// TODO エラー
+		NSLog(@"現在位置を取得できませんでした。");
 	}
 	
 	[url release];

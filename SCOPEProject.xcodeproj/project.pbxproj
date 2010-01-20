@@ -582,11 +582,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Institute for HyperNetwork Society";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = SCOPEProject_Prefix.pch;
 				INFOPLIST_FILE = "SCOPEProject-Info.plist";
 				PRODUCT_NAME = SCOPEProject;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D8A44C2F-33F8-44DA-A98D-1CEF658422E3";
 			};
 			name = Release;
 		};

@@ -49,8 +49,8 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont" id="675632783">
-							<string key="NSName">HiraKakuPro-W6</string>
+						<object class="NSFont" key="IBUIFont" id="540868164">
+							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">48</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -78,7 +78,7 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="675632783"/>
+						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">避難中</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
@@ -91,13 +91,13 @@
 					<object class="IBUIButton" id="960358030">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 190}, {280, 75}}</string>
+						<string key="NSFrame">{{20, 192}, {280, 75}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="675632783"/>
+						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">ヘルプ</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
@@ -116,7 +116,7 @@
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="675632783"/>
+						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">救助活動中</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
@@ -226,8 +226,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="958816544"/>
 							<reference ref="321836634"/>
-							<reference ref="960358030"/>
 							<reference ref="1055817321"/>
+							<reference ref="960358030"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>

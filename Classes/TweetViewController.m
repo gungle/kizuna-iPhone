@@ -154,7 +154,7 @@
 			cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:TweetListCellIdentifier2] autorelease];
 		}
 		
-		cell.text = @"RELOAD";
+		cell.textLabel.text = @"RELOAD";
 		
 		
 		return cell;
