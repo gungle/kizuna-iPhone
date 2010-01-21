@@ -36,5 +36,6 @@
 @property (nonatomic, retain) NSString *updatedAt;
 
 -(void)setCoordinate;
+-(void)setCoordinate:(CLLocationCoordinate2D)coordinateVal;
 
 @end

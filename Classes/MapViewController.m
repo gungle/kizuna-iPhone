@@ -43,11 +43,26 @@
 	self.navigationItem.rightBarButtonItem = refreshButton;
 	[refreshButton release];
 	
+	UIActivityIndicatorView *indicator;
+	indicator = [[[UIActivityIndicatorView alloc] 
+				  initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleGray]
+				 autorelease];
+	indicator.frame = self.view.bounds;
+	indicator.contentMode = UIViewContentModeCenter;
 	
+	[indicator startAnimating];
+	for( UIView *subView in self.view.subviews )
+	{
+		[subView removeFromSuperview];
+	}
+	[self.view addSubview: indicator];
+
 	// 既存の情報を削除
 	if ([[mkMapView annotations] count] > 0) {
 		[mkMapView removeAnnotations:mkMapView.annotations];
 	}
+	
+	mapItems = [[NSMutableArray alloc]initWithCapacity:0];
 	
 	// 現在位置フラグ初期化
 	// 遷移元判定
@@ -59,8 +74,6 @@
 	} else {
 		// ステータス詳細の位置ボタンで遷移
 		NSLog(@"ステータス詳細の位置ボタンで遷移");
-		NSLog(@"userId               = %@" ,userId);
-		NSLog(@"scopeDelegate.userId = %@" ,myUserId);
 		if ([userId isEqualToString:myUserId]) {
 			// 自分が選択された
 			NSLog(@"自分が選択された");
@@ -78,17 +91,6 @@
 		[self showMap];
 	}	
 }
-
-- (void)viewDidAppear:(BOOL)animated {
-}
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -121,8 +123,6 @@
 	
 	NSMutableArray *items = [statusXmlParser items];
 	StatusInfo *statusInfo = [items objectAtIndex:0];
-	NSLog(@"---- > latitude  = %f",[statusInfo.nowLat doubleValue]);
-	NSLog(@"---- > longitude = %f",[statusInfo.nowLon doubleValue]);
 		
 	if(statusInfo) {
 		if (locationFlag) {
@@ -140,14 +140,14 @@
 					// 選択されたユーザのグループまたは家族のデフォルトの位置を取得？
 				}
 			}
-		}			
+		}
 		MapInfo *userMapInfo = [[MapInfo alloc] initWithCoordinate:location];
 		userMapInfo.posTitle = @"ココ";
 		userMapInfo.posExplain = statusInfo.fullName;
 		userMapInfo.picturePath = statusInfo.iconPath;
 		userMapInfo.posKind = @"0";
-		[mkMapView addAnnotation:userMapInfo];
-		[userMapInfo release];		
+		[mapItems addObject:userMapInfo];
+		[userMapInfo release];
 	} else {
 		// TODO エラー
 		NSLog(@"現在位置を取得できませんでした。");
@@ -174,6 +174,7 @@
 	}
 	// マップ表示
 	[self showMap];
+	
 }
 
 // 周辺情報取得(API取得)
@@ -185,25 +186,23 @@
 					 [self getProperties:@"SERVER"],
 					 [self getProperties:@"API_KEY_MAP"],
 					 myGroupId];
-	NSLog(@"----- ====== >>>> %@",url);
 	[mapXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
-	mapItems = [mapXmlParser items];
-	for (int i = 0; i < [mapItems count];i++) {
+
+	for (int i = 0; i < [[mapXmlParser items] count];i++) {
 		// マップ情報
-		[mkMapView addAnnotation:[mapItems objectAtIndex:i]];		
+		[mapItems addObject:[[mapXmlParser items] objectAtIndex:i]];
 	}
+	
 	[url          release];
 	[mapXmlParser release];
 	
 }
 
-// マップ表示
-- (void) showMap {
-	NSLog(@"----- > showMap");
-	// 現在位置取得
-	[self getLocation];
-	// 周辺情報
-	[self getNeighborhoodInfo];
+// マップ情報設定
+- (void)setMapViewAnnotation {
+	for (MapInfo *info in mapItems) {
+		[mkMapView addAnnotation:info];
+	}
 	
 	MKCoordinateRegion region;
 	MKCoordinateSpan   span;
@@ -213,12 +212,32 @@
 	
 	// 位置設定
 	region.center = location;	
-	
+
+	// remove indicator 
+	for( UIView *subView in self.view.subviews )
+	{
+		[subView removeFromSuperview];
+	}
+	[self.view addSubview:mkMapView];
 	[mkMapView setRegion:region animated:FALSE];
 	[mkMapView regionThatFits:region];
 	
+	
 }
 
+// マップ表示
+- (void) showMap {
+	// 現在位置取得
+	[self getLocation];
+	// 周辺情報
+	[self getNeighborhoodInfo];
+	
+	if (!locationFlag) {
+		[self setMapViewAnnotation];
+	}
+}
+
+#pragma mark CLLocationManagerDelegate methods
 // 現在位置取得成功時の処理
 - (void)locationManager:(CLLocationManager *)manager
 	didUpdateToLocation:(CLLocation *)newLocation
@@ -226,11 +245,17 @@
 {
 	// 位置情報を取り出す
 	location.latitude  = newLocation.coordinate.latitude;
-	location.longitude = newLocation.coordinate.longitude;
-	NSLog(@"---- > GPS latitude  = %f",location.latitude);
-	NSLog(@"---- > GPS longitude = %f",location.longitude);
+	location.longitude  = newLocation.coordinate.longitude;
+
+	// 現在位置再設定
+	MapInfo *userMapInfo = [mapItems objectAtIndex:0];
+	[userMapInfo setCoordinate:newLocation.coordinate];
+	
+	[self setMapViewAnnotation];
 }
 
+
+#pragma mark MKMapViewDelegate methods
 // Override
 - (MKAnnotationView *) mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>) annotation{
     MKPinAnnotationView *annView=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"currentloc"];
@@ -279,9 +304,7 @@
 
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control{
-	NSLog(@"tap tap");
 	// 次の画面で画像表示またはこの画面でModalViewに画像表示
-	NSLog(@"---> mapView -- > %@", [(MapInfo *)view.annotation picturePath]);
 	MapInfoViewController *mapInfoViewController = [[MapInfoViewController alloc] initWithImagePath:[(MapInfo *)view.annotation picturePath]];
 	mapInfoViewController.title = @"詳細画像";
 	[self.navigationController pushViewController:mapInfoViewController animated:YES];

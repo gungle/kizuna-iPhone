@@ -40,6 +40,9 @@
 	coordinate.latitude = [posLat doubleValue];	
 	coordinate.longitude= [posLon doubleValue];	
 }
+-(void)setCoordinate:(CLLocationCoordinate2D)coordinateVal {
+	coordinate = coordinateVal;
+}
 
 
 - (void)dealloc {

@@ -29,4 +29,7 @@
 // 周辺情報取得(API取得)
 - (void)getNeighborhoodInfo;
 
+// マップ情報設定
+- (void)setMapViewAnnotation;
+
 @end
