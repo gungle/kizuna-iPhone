@@ -2,7 +2,7 @@
 //  UserXMLParser.m
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/18.
+//  Created by YOSHIDA Hiroyuki on 09/12/18.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -21,7 +21,6 @@
     if (qualifiedName) {
         elementName = qualifiedName;
     }
-	//	NSLog(@"----- > %@ start",elementName);
 	if ([elementName isEqualToString:ELEMENT_NAME_USERS]) {
 		// 何もしない
 	} else if ([elementName isEqualToString:ELEMENT_NAME_USER]) {
@@ -53,7 +52,6 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string  
 {  
-	//	NSLog(@"----- > %@ end",string);
     // エレメントの文字データを string で取得
 	if (![nodeName isEqualToString:ELEMENT_NAME_USERS]
 		&& ![nodeName isEqualToString:ELEMENT_NAME_USER]) {
@@ -68,7 +66,6 @@
         elementName = qualifiedName;
     }
 	
-	//	NSLog(@"----- > %@ end",elementName);
     if ([elementName isEqualToString:ELEMENT_NAME_USERS]) {
 	} else if ([elementName isEqualToString:ELEMENT_NAME_USER]) {
 		[items addObject:userInfo];

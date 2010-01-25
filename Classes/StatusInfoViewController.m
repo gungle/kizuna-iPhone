@@ -1,9 +1,9 @@
 //-------------------------------------------------------------
 //
 //  StatusInfoViewController.m
-//  ScopeProject02
+//  ScopeProject
 //
-//  Created by yoshida on 09/11/18.
+//  Created by YOSHIDA Hiroyuki on 09/11/18.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 //-------------------------------------------------------------
@@ -34,7 +34,6 @@
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	NSLog(@"-- <StatusInfoViewController> initWithNibName");
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		// Custom initialization
 		// Button
@@ -52,7 +51,6 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	NSLog(@"-- <StatusInfoViewController> viewDidLoad");
     [super viewDidLoad];
 	scrlView.pagingEnabled = NO;
 	scrlView.contentSize = CGSizeMake(320, 500);
@@ -104,13 +102,6 @@
 	[self.tblView reloadData];
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -120,34 +111,19 @@
 }
 
 - (void)viewDidUnload {
-	NSLog(@"-- <StatusInfoViewController> viewDidUnload");
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	NSLog(@"-- <StatusInfoViewController> viewWillAppear");
     [super viewWillAppear:animated];
 	[self requestStatusInfo];
 	[self.tblView reloadData];
 
 }
-- (void)viewDidAppear:(BOOL)animated {
-	NSLog(@"-- <StatusInfoViewController> viewDidAppear");
-    [super viewDidAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated {
-	NSLog(@"-- <StatusInfoViewController> viewWillDisappear");
-	[super viewWillDisappear:animated];
-}
-- (void)viewDidDisappear:(BOOL)animated {
-	NSLog(@"-- <StatusInfoViewController> viewDidDisappear");
-	[super viewDidDisappear:animated];
-}
 
 
 - (void)dealloc {
-	NSLog(@"-- <StatusInfoViewController> dealloc");
 	[fullName     release];
 	[fullNameKana release];
 	[status       release];
@@ -164,7 +140,6 @@
 }
 
 -(IBAction)pushDownMapBtn:(id)sender{
-	NSLog(@"----- >>> pushDownMapBtn");
 	MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:nil bundle:nil];
 	mapViewController.userId  = userId;
 	mapViewController.title = @"現在位置";
@@ -173,7 +148,6 @@
 }
 
 -(IBAction)pushDownReportBtn:(id)sender{
-	NSLog(@"----- >>> pushDownReportBtn");
 	ReportViewController *reportViewController = [[ReportViewController alloc] initWithNibName:nil bundle:nil];
 	reportViewController.userId  = userId;
 	reportViewController.title = @"現状報告";
@@ -236,10 +210,8 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesBegan kita-");
 	UITouch *touch = [[event allTouches] anyObject];
 	if ([touch view] == userIcon) {
-		NSLog(@"-- > Image View touched!!");
 		// ユーザプロフィール画面に遷移
 		UserProfileViewController *userViewController = [[UserProfileViewController alloc] initWithNibName:nil bundle:nil];
 		userViewController.userId  = userId;
@@ -247,15 +219,12 @@
 		[self.navigationController pushViewController:userViewController animated:YES];
 		[userViewController release];
 	} else {
-		NSLog(@"-- > scroll View touched!!");		
 	}
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesEnd");
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"touchesMoved");		
 }
 
 @end

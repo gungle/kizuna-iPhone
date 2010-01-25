@@ -1,7 +1,7 @@
 //-------------------------------------------------------------
 //
-//  RootViewController.m
-//  ScopeProject02
+//  StatusViewController.m
+//  ScopeProject
 //
 //  Created by YOSHIDA Hiroyuki on 09/11/17.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
@@ -24,7 +24,6 @@
 @synthesize tblView;
 
 - (void)viewDidLoad {
-	NSLog(@"-- <StatusViewController> viewDidLoard");
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -68,34 +67,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-	NSLog(@"-- <StatusViewController> viewWillAppear");
     [super viewWillAppear:animated];
 	[self requestStatusList];
 	[self.tblView reloadData];
 }
-
-/*
-- (void)viewDidAppear:(BOOL)animated {
-	NSLog(@"-- <StatusViewController> viewDidAppear");
-    [super viewDidAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated {
-	NSLog(@"-- <StatusViewController> viewWillDisappear");
-	[super viewWillDisappear:animated];
-}
-- (void)viewDidDisappear:(BOOL)animated {
-	NSLog(@"-- <StatusViewController> viewDidDisappear");
-	[super viewDidDisappear:animated];
-}
-*/
-
-/*
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
- */
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -181,7 +156,6 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesBegan");
 /*
 	UITouch *touch = [[event allTouches] anyObject];
 	if ([touch view] == userIcon) {
@@ -192,11 +166,9 @@
 */
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesEnd");
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"touchesMoved");		
 }
 
 @end

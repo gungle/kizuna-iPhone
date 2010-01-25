@@ -1,9 +1,9 @@
 //-------------------------------------------------------------
 //
 //  StatusInfoViewController.h
-//  ScopeProject02
+//  ScopeProject
 //
-//  Created by yoshida on 09/11/18.
+//  Created by YOSHIDA Hiroyuki on 09/11/18.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 //-------------------------------------------------------------

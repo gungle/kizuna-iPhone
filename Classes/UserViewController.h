@@ -2,7 +2,7 @@
 //  UserViewController.h
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 10/01/05.
+//  Created by YOSHIDA Hiroyuki on 10/01/05.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

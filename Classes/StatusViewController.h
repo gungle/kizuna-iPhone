@@ -1,7 +1,7 @@
 //-------------------------------------------------------------
 //
-//  RootViewController.h
-//  ScopeProject02
+//  StatusViewController.h
+//  ScopeProject
 //
 //  Created by YOSHIDA Hiroyuki on 09/11/17.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
@@ -10,7 +10,6 @@
 
 #import "CommonViewController.h"
 #import "StatusListXMLParser.h"
-
 #import "StatusInfoViewController.h"
 
 @interface StatusViewController : CommonViewController {
@@ -22,6 +21,6 @@
 @property (nonatomic, retain) StatusListXMLParser *statusXmlParser;
 @property (nonatomic, retain) IBOutlet UITableView *tblView;
 
--(void)refresh:(id)sender;
--(void)requestStatusList;
+- (void)refresh:(id)sender;
+- (void)requestStatusList;
 @end

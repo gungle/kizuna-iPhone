@@ -2,7 +2,7 @@
 //  LoginXmlParser.m
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/09.
+//  Created by YOSHIDA Hiroyuki on 09/12/09.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -14,7 +14,6 @@
 @synthesize userId;
 
 - (void)dealloc {
-	NSLog(@"dealloc ");
 	[groupId release];
 	[userId  release];
     [super   dealloc];
@@ -63,7 +62,6 @@
 		} else if ([elementName isEqualToString:ELEMENT_NAME_MESSAGE]) {
 			// エラーの場合
 			message = [[NSString alloc]initWithString:nodeContent];
-			NSLog(@"%@", message);
 		} else if ([elementName isEqualToString:ELEMENT_NAME_GROUP_ID]) {
 			groupId = [[NSString alloc]initWithString:nodeContent];
 		} else if ([elementName isEqualToString:ELEMENT_NAME_USER_ID]) {

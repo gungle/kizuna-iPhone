@@ -3,7 +3,7 @@
 //  StatusListViewController.h
 //  ScopeProject02
 //
-//  Created by yoshida on 09/11/25.
+//  Created by YOSHIDA Hiroyuki on 09/11/25.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 //-------------------------------------------------------------

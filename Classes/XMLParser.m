@@ -1,9 +1,9 @@
 //-------------------------------------------------------------
 //
 //  XMLParser.m
-//  ScopeProject02
+//  ScopeProject
 //
-//  Created by yoshida on 09/11/20.
+//  Created by YOSHIDA Hiroyuki on 09/11/20.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 //-------------------------------------------------------------
@@ -31,7 +31,6 @@
 - (void)parseXMLFileAtURL:(NSURL *)url parseError:(NSError **)error
 {
 	items = [[NSMutableArray alloc] initWithCapacity:0];
-	NSLog(@"------ >>>>> 初期化");
 	parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
 	[parser setDelegate:self];
 	[parser setShouldProcessNamespaces:NO];

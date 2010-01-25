@@ -2,7 +2,7 @@
 //  StatusInfoViewCell.m
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/11.
+//  Created by YOSHIDA Hiroyuki on 09/12/11.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 

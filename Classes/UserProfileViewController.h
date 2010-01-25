@@ -1,8 +1,8 @@
 //
 //  GroupTestViewController.h
-//  GroupTest
+//  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/03.
+//  Created by YOSHIDA Hiroyuki on 09/12/03.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 

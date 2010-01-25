@@ -1,8 +1,8 @@
 //
 //  AsyncImageView.m
-//  ScopeProject02
+//  ScopeProject
 //
-//  Created by yoshida on 09/11/26.
+//  Created by YOSHIDA Hiroyuki on 09/11/26.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
