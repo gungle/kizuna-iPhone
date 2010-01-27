@@ -10,6 +10,7 @@
 #import "TweetListCell.h"
 #import "TweetInputController.h"
 #import "TweetInfo.h"
+#import "AsyncImageView.h"
 
 @implementation TweetViewController
 @synthesize tweetXMLParser;
@@ -176,11 +177,13 @@
 		cell.updatedAt.text = [[items objectAtIndex:row] updatedAt];
 		
 		// アイコン
-		//	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(2,2,48,48)];
+		AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,48,48)];
+		NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [[items objectAtIndex:row] iconPath]];
+		[asyncImageView loadImage:imagePath];
 		//	[asyncImageView loadImage:@"http://weather.livedoor.com/img/icon/1.gif"];
 		//	asyncImageView.tag = 1;
-		//	[cell. iconPath addSubview:asyncImageView];
-		//	[asyncImageView release];
+		[cell. iconPath addSubview:asyncImageView];
+		[asyncImageView release];
 		
 		return cell;
 	}
