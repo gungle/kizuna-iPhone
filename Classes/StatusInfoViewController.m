@@ -63,6 +63,9 @@
 }
 
 -(void)requestStatusInfo{
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	NSError *parseError = nil;	
 	StatusListXMLParser *statusXmlParser = [[StatusListXMLParser alloc] init];
 	
@@ -95,6 +98,9 @@
 	[userIcon addSubview:asyncImageView];
 	[asyncImageView release];
 	[statusXmlParser release];
+	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 -(void)refresh:(id)sender{

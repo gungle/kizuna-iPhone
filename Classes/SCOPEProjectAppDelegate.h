@@ -2,7 +2,7 @@
 //  SCOPEProjectAppDelegate.h
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/04.
+//  Created by YOSHIDA Hiroyuki on 09/12/04.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 

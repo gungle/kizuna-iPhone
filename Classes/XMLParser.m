@@ -1,7 +1,7 @@
 //-------------------------------------------------------------
 //
 //  XMLParser.m
-//  ScopeProject
+//  SCOPEroject
 //
 //  Created by YOSHIDA Hiroyuki on 09/11/20.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.

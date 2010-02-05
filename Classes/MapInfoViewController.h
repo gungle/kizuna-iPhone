@@ -2,7 +2,7 @@
 //  MapInfoViewController.h
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 10/01/07.
+//  Created by YOSHIDA Hiroyuki on 10/01/07.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

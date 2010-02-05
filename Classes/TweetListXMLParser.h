@@ -1,6 +1,6 @@
 //
 //  TweetListXMLParser.h
-//  Cells2
+//  SCOPEroject
 //
 //  Created by 菊池　達哉 on 09/12/16.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.

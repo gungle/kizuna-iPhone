@@ -35,6 +35,9 @@
 }
 
 - (void)requestUserList {
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	// Table
 	NSError *parseError = nil;  
 	if (userXmlParser == nil){
@@ -52,6 +55,9 @@
 	[userXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
 	[url release];
 	items = [userXmlParser items];
+
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)refresh:(id)sender {

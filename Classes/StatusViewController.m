@@ -1,7 +1,7 @@
 //-------------------------------------------------------------
 //
 //  StatusViewController.m
-//  ScopeProject
+//  SCOPEProject
 //
 //  Created by YOSHIDA Hiroyuki on 09/11/17.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
@@ -41,6 +41,9 @@
 }
 
 - (void)requestStatusList {
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	// Table
 	NSError *parseError = nil;  
 	if (statusXmlParser == nil){
@@ -58,6 +61,9 @@
 	[statusXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
 	[url release];
 	items = [statusXmlParser items];
+	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)refresh:(id)sender {

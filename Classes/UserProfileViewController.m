@@ -81,6 +81,8 @@
 
 
 - (void)requestUserInfo{
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 	
 	NSError *parseError = nil;  
 	UserXMLParser *userXMLParser = [[UserXMLParser alloc] init];
@@ -113,6 +115,8 @@
 	[url          release];
 	[userXMLParser release];
 	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void) viewWillAppear:(BOOL)animated {

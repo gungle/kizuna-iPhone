@@ -1,8 +1,8 @@
 //
 //  MapViewController.m
-//  ScopeProject02
+//  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/01.
+//  Created by YOSHIDA Hiroyuki on 09/12/01.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -84,6 +84,9 @@
 		}
 	}
 	
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	if (locationFlag) {
 		// 現在位置取得確認
 		[self confirmGetLocation];		
@@ -235,6 +238,9 @@
 	if (!locationFlag) {
 		[self setMapViewAnnotation];
 	}
+
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 #pragma mark CLLocationManagerDelegate methods

@@ -31,6 +31,9 @@
 // put用
 - (void)report:(NSString *)key value:(NSString *)value{
 	
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	NSString *url = [[NSString alloc]initWithFormat:@"%@%@/%@.xml",
 					 [self getProperties:@"SERVER"], 
 					 [self getProperties:@"API_KEY_REPORT_STATUS"],
@@ -61,6 +64,9 @@
 	}
 	NSLog(@"---- >>> %c", *p);
 	NSLog(@"---- >>> connection end");
+	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 @end

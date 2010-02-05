@@ -2,7 +2,7 @@
 //  SCOPEProjectAppDelegate.m
 //  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/04.
+//  Created by YOSHIDA Hiroyuki on 09/12/04.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
@@ -47,6 +47,9 @@
 	NSLog(@"ログインID　= %@",loginId);
 	NSLog(@"パスワード = %@",password);
 
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+
 	// グループID、ユーザID取得・設定
 	LoginXMLParser *loginXmlParser = [[LoginXMLParser alloc] init];
 	NSString *url = [[NSString alloc]initWithFormat:@"%@%@?login=%@&password=%@",
@@ -65,13 +68,14 @@
 	NSLog(@"ユーザID　 = %@",self.userId);
 	
 	// Add the tab bar controller's current view as a subview of the window
-//	[tabBarController setViewControllers:[NSArray arrayWithObjects:tweetNaviController, statusNaviController, mapNaviController, reportNaviController, nil] animated:NO];
 	[tabBarController setViewControllers:[NSArray arrayWithObjects:tweetNaviController, statusNaviController, mapNaviController, reportNaviController, userListNaviController, nil] animated:NO];
 	[window addSubview:tabBarController.view];
 
 	[password release];
 	[loginXmlParser release];
 	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 

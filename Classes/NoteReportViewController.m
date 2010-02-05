@@ -1,8 +1,8 @@
 //
 //  NoteReportViewController.m
-//  Test
+//  SCOPEProject
 //
-//  Created by ハイパー研 on 09/12/01.
+//  Created by YOSHIDA Hiroyuki on 09/12/01.
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
@@ -41,6 +41,9 @@
 	noteTextView.backgroundColor = [UIColor whiteColor];
 	
 	
+	// indicator visible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+	
 	// ユーザステータス一覧取得
 	NSError *parseError = nil;	
 	StatusListXMLParser *statusXmlParser = [[StatusListXMLParser alloc] init];
@@ -58,6 +61,8 @@
 	noteTextView.text = statusInfo.note;
 	[statusXmlParser release];
 	
+	// indicator invisible
+	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
 - (void)didReceiveMemoryWarning {
