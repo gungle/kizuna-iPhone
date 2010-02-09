@@ -13,9 +13,14 @@
 @private
 	NSURLConnection *connection;
 	NSMutableData   *imageData;
+	NSIndexPath     *indexPath;
 }
 
+@property (retain) NSMutableData *imageData;
+@property (retain) NSIndexPath *indexPath;
+
 -(void)loadImage:(NSString *)url;
+- (void)notifyImageLoadFinish;
 -(void)abort;
 
 @end

@@ -24,6 +24,7 @@
 	NSString *createdAt;		// 登録日時
 	NSString *updatedAt;		// 最終更新日時
 	NSString *iconPath;			// アイコンパス
+	NSMutableData *imageData;
 }
 
 @property (nonatomic, retain) NSString *groupId;
@@ -38,5 +39,6 @@
 @property (nonatomic, retain) NSString *createdAt;
 @property (nonatomic, retain) NSString *updatedAt;
 @property (nonatomic, retain) NSString *iconPath;
+@property (nonatomic, retain) NSMutableData *imageData;
 
 @end

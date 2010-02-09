@@ -122,8 +122,10 @@
     
 	// Configure the cell.
 	int personIndex = [indexPath indexAtPosition:[indexPath length] -1];
+	StatusInfo *info = (StatusInfo *)[items objectAtIndex:personIndex];
 	
 	// ユーザ情報設定
+/*
 	// アイコン
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(2,2,48,48)];
 	NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [[items objectAtIndex:personIndex] iconPath]];
@@ -133,14 +135,52 @@
 
 	[cell.userIcon addSubview:asyncImageView];
 	[asyncImageView release];
+*/
+	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(2,2,48,48)];
+	if (info.imageData == nil) {
+		// first time
+/* アイコンにインディケータを表示する場合
+		// create activity indicator
+		UIActivityIndicatorView *indicator;
+		indicator = [[[UIActivityIndicatorView alloc] 
+					  initWithActivityIndicatorStyle: UIActivityIndicatorViewStyleGray]
+					 autorelease];
+		indicator.frame = cell.userIcon.bounds;
+		indicator.contentMode = UIViewContentModeCenter;
+		
+		[indicator startAnimating];
+		cell.userIcon.image = nil;
+		// add indicator
+		[cell.userIcon addSubview: indicator];
+*/
+		NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [info iconPath]];
+		[asyncImageView loadImage:imagePath];
+		//	 asyncImageView.tag = 1;
+		asyncImageView.indexPath = indexPath;
+		[imagePath release];
+		
+		[[NSNotificationCenter defaultCenter]
+		 addObserver: self
+		 selector: @selector(loadImageDidEnd:)
+		 name:@"nothiFyImageLoadFinish"
+		 object: asyncImageView];
+		
+	} else {
+		// over than second times
+		NSData *data = (NSData *)[info imageData];
+		asyncImageView.image = [UIImage imageWithData:data];
+		[cell.userIcon addSubview:asyncImageView];
+	}
+	[asyncImageView release];
+
 	// ユーザ名
-	[cell.fullName setText:[[items objectAtIndex:personIndex] fullName]];
+	[cell.fullName setText:[info fullName]];
 	// ステータス
-	[cell.status setText:[[items objectAtIndex:personIndex] status]];
+	[cell.status setText:[info status]];
 	// 立場
-	[cell.position setText:[[items objectAtIndex:personIndex] position]];
+	[cell.position setText:[info position]];
 	// 更新日時
-	[cell.updatedAt setText:[[items objectAtIndex:personIndex] updatedAt]];
+	[cell.updatedAt setText:[info updatedAt]];
 
     return cell;
 }
@@ -159,6 +199,28 @@
 	[self.navigationController pushViewController:statusInfoViewController animated:YES];
 
 	[statusInfoViewController release];
+}
+
+#pragma mark Load Image
+- (void) loadImageDidEnd: (NSNotification *)notification
+{	
+	AsyncImageView *asyncImageView = (AsyncImageView *)[notification object];
+	if (asyncImageView != nil) {
+		int personIndex = [asyncImageView.indexPath indexAtPosition:[asyncImageView.indexPath length] -1];
+		StatusInfo *info = (StatusInfo *)[items objectAtIndex:personIndex];
+		info.imageData = [[NSMutableData alloc]initWithCapacity:0];
+		info.imageData =  asyncImageView.imageData;
+		StatusListViewCell *cell = (StatusListViewCell *)[self.tblView cellForRowAtIndexPath: asyncImageView.indexPath];
+		if (cell != nil) {
+/*　アイコンにインディケータを表示した場合
+			// remove indicator
+			for ( UIView *subView in cell.userIcon.subviews){
+				[subView removeFromSuperview];
+			}
+*/
+			[cell.userIcon addSubview:asyncImageView];
+		}
+	}	
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

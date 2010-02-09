@@ -11,6 +11,9 @@
 
 @implementation AsyncImageView
 
+@synthesize indexPath;
+@synthesize imageData;
+
 
 -(void)loadImage:(NSString *)url {
 	[self abort];
@@ -40,8 +43,15 @@
 	self.autoresizingMask = UIViewAutoresizingFlexibleWidth || UIViewAutoresizingFlexibleHeight;		
 
 	self.image = [UIImage imageWithData:imageData];
+	[self notifyImageLoadFinish];
 	
 	[self abort];
+}
+
+- (void)notifyImageLoadFinish {
+	[[NSNotificationCenter defaultCenter]
+     postNotificationName: @"nothiFyImageLoadFinish"
+     object: self];	
 }
 
 -(void)abort{
@@ -50,10 +60,12 @@
 		[connection release];
 		connection = nil;
 	}
+/*
 	if(imageData != nil){
 		[imageData release];
 		imageData = nil;
 	}
+*/
 }
 
 - (void)dealloc {

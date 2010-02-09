@@ -25,6 +25,7 @@
 @synthesize createdAt;
 @synthesize updatedAt;
 @synthesize iconPath;
+@synthesize imageData;
 
 - (void)dealloc {
 	[groupId      release];
@@ -39,6 +40,7 @@
 	[createdAt    release];
 	[updatedAt    release];
 	[iconPath     release];
+	[imageData    release];
 	[super        dealloc];
 }
 
