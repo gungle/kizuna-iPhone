@@ -26,6 +26,7 @@
 @synthesize position;
 @synthesize updatedAt;
 @synthesize note;
+@synthesize publicFlag;
 @synthesize mapBtn;
 @synthesize reportBtn;
 @synthesize userIcon;
@@ -89,7 +90,10 @@
 	status   = [[NSString alloc]initWithString:statusInfo.status];
 	position = [[NSString alloc]initWithString:statusInfo.position];
 	note     = [[NSString alloc]initWithString:statusInfo.note];
-	
+	// TODO サーバ対応待ち
+//	publicFlag = [[NSString alloc]initWithString:statusInfo.publicFlag];
+	publicFlag = [[NSString alloc]initWithString:@"0"];	
+
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,100,100)];
 	NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", statusInfo.iconPath];
 	NSLog(@" image path = %@", imagePath);
@@ -136,6 +140,7 @@
 	[position     release];
 	[updatedAt    release];
 	[note         release];
+	[publicFlag   release];
 	[mapBtn       release];
 	[reportBtn    release];
 	[userIcon     release];
@@ -218,12 +223,19 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	UITouch *touch = [[event allTouches] anyObject];
 	if ([touch view] == userIcon) {
-		// ユーザプロフィール画面に遷移
-		UserProfileViewController *userViewController = [[UserProfileViewController alloc] initWithNibName:nil bundle:nil];
-		userViewController.userId  = userId;
-		userViewController.title = @"ユーザプロフィール";
-		[self.navigationController pushViewController:userViewController animated:YES];
-		[userViewController release];
+		if ([publicFlag isEqualToString:@"1"]) {
+			// 公開グループの場合
+			// ユーザプロフィール画面に遷移
+			UserProfileViewController *userViewController = [[UserProfileViewController alloc] initWithNibName:nil bundle:nil];
+			userViewController.userId  = userId;
+			userViewController.title = @"ユーザプロフィール";
+			[self.navigationController pushViewController:userViewController animated:YES];
+			[userViewController release];
+		} else {
+			// 非公開グループの場合
+			[self alertView:@"非公開グループ" message:@"非公開グループのためユーザ情報は表示できません。" okBtnName:@"OK"];
+		}
+
 	} else {
 	}
 }

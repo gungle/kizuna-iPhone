@@ -24,6 +24,7 @@
 	NSString *createdAt;		// 登録日時
 	NSString *updatedAt;		// 最終更新日時
 	NSString *iconPath;			// アイコンパス
+	NSString *publicFlag;		// 個人情報公開フラグ
 	NSMutableData *imageData;
 }
 
@@ -39,6 +40,7 @@
 @property (nonatomic, retain) NSString *createdAt;
 @property (nonatomic, retain) NSString *updatedAt;
 @property (nonatomic, retain) NSString *iconPath;
+@property (nonatomic, retain) NSString *publicFlag;
 @property (nonatomic, retain) NSMutableData *imageData;
 
 @end

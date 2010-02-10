@@ -25,6 +25,7 @@
 @synthesize createdAt;
 @synthesize updatedAt;
 @synthesize iconPath;
+@synthesize publicFlag;
 @synthesize imageData;
 
 - (void)dealloc {
@@ -40,6 +41,7 @@
 	[createdAt    release];
 	[updatedAt    release];
 	[iconPath     release];
+	[publicFlag   release];
 	[imageData    release];
 	[super        dealloc];
 }

@@ -21,6 +21,7 @@
 #define ELEMENT_NAME_STATUS          @"status"
 #define ELEMENT_NAME_NOW_LAT         @"now_lat"
 #define ELEMENT_NAME_NOW_LON         @"now_lon"
+#define ELEMENT_NAME_PUBLIC_FLAG     @"public_flag"
 #define ELEMENT_NAME_NOTE            @"note"
 #define ELEMENT_NAME_ICON_PATH       @"icon_path"
 #define ELEMENT_NAME_CREATED_AT      @"created_at"

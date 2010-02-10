@@ -23,6 +23,7 @@
 	NSString     *status;
 	NSString     *position;
 	NSString     *note;
+	NSString     *publicFlag;
 	CommonImageView  *userIcon;
 	CommonScrollView *scrlView;
 	
@@ -38,6 +39,7 @@
 @property (nonatomic, retain) NSString     *status;
 @property (nonatomic, retain) NSString     *position;
 @property (nonatomic, retain) NSString     *note;
+@property (nonatomic, retain) NSString     *publicFlag;
 @property (nonatomic, retain) IBOutlet CommonImageView  *userIcon;
 @property (nonatomic, retain) IBOutlet CommonScrollView *scrlView;
 
