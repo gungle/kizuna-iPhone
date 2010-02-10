@@ -11,6 +11,8 @@
 
 @implementation ReportCommonViewController
 
+@synthesize reportTitle;
+
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -25,6 +27,7 @@
 
 
 - (void)dealloc {
+	[reportTitle release];
     [super dealloc];
 }
 
@@ -67,6 +70,9 @@
 	
 	// indicator invisible
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+	
+	NSString *message = [[NSString alloc]initWithFormat:@"%@の報告が完了しました。", reportTitle];
+	[self alertView:@"報告完了" message:message okBtnName:@"OK"];
 }
 
 @end

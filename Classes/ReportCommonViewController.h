@@ -9,8 +9,10 @@
 #import "CommonViewController.h"
 
 @interface ReportCommonViewController : CommonViewController {
-
+	NSString *reportTitle;
 }
+
+@property (nonatomic,retain) NSString *reportTitle;
 
 - (void)report:(NSString *)key value:(NSString *)value;
 

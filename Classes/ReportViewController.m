@@ -58,7 +58,6 @@
 	location.latitude  = newLocation.coordinate.latitude;
 	location.longitude = newLocation.coordinate.longitude;
 	[self report];
-	[self alertView:@"現在位置報告完了" message:@"現在位置の報告が完了しました。" okBtnName:@"OK"];
 }
 
 
@@ -125,6 +124,7 @@
 			// 現在の状況
 			statusViewController = [[StatusReportViewController alloc] initWithNibName:nil bundle:nil];
 			statusViewController.title = @"現在の状況";
+			statusViewController.reportTitle = @"現在の状況";
 			statusViewController.userId = userId;
 			[self.navigationController pushViewController:statusViewController animated:YES];
 			[statusViewController release];
@@ -133,6 +133,7 @@
 			// 立場
 			positionViewController = [[PositionReportViewController alloc] initWithNibName:nil bundle:nil];
 			positionViewController.title = @"立場";
+			positionViewController.reportTitle = @"立場";
 			positionViewController.userId = userId;
 			[self.navigationController pushViewController:positionViewController animated:YES];
 			[positionViewController release];
@@ -145,6 +146,7 @@
 			// その他の情報
 			noteViewController = [[NoteReportViewController alloc] initWithNibName:nil bundle:nil];
 			noteViewController.title = @"その他の情報";
+			noteViewController.reportTitle = @"その他の情報";
 			noteViewController.userId = userId;
 			[self.navigationController pushViewController:noteViewController animated:YES];
 			[noteViewController release];
@@ -203,6 +205,8 @@
 	}
 	NSLog(@"---- >>> %c", *p);
 	NSLog(@"---- >>> connection end");
+
+	[self alertView:@"報告完了" message:@"現在位置の報告が完了しました。" okBtnName:@"OK"];
 }
 
 @end
