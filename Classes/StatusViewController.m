@@ -56,7 +56,7 @@
 											[self getProperties:@"API_KEY_STATUS"],
 											myGroupId
 											];
-	NSLog(@" url = %@", url);
+//	NSLog(@" url = %@", url);
 
 	[statusXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
 	[url release];
@@ -88,11 +88,11 @@
 - (void)viewDidUnload {
 	// Release anything that can be recreated in viewDidLoad or on demand.
 	// e.g. self.myOutlet = nil;
-	NSLog(@"-- <StatusViewController> viewDidUnload");
+//	NSLog(@"-- <StatusViewController> viewDidUnload");
 }
 
 - (void)dealloc {
-	NSLog(@"-- <StatusViewController> dealloc");
+//	NSLog(@"-- <StatusViewController> dealloc");
 	[statusXmlParser release];
 	[tblView         release];
     [super dealloc];

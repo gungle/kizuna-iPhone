@@ -30,16 +30,16 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesBegan CommonScrollView");
+//	NSLog(@"tuchesBegan CommonScrollView");
 	[[self nextResponder] touchesBegan:touches withEvent:event];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesEnd CommonScrollView");
+//	NSLog(@"tuchesEnd CommonScrollView");
 	[[self nextResponder] touchesEnded:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"touchesMoved CommonScrollView");
+//	NSLog(@"touchesMoved CommonScrollView");
 	[[self nextResponder] touchesMoved:touches withEvent:event];
 }
 

@@ -22,8 +22,8 @@
 	SCOPEProjectAppDelegate *scopeDelegate = (SCOPEProjectAppDelegate *)[[UIApplication sharedApplication] delegate];
 	myGroupId = [[NSString alloc]initWithFormat:scopeDelegate.groupId];
 	myUserId  = [[NSString alloc]initWithFormat:scopeDelegate.userId];
-	NSLog(@"---- > [my group id] = %@", myGroupId);
-	NSLog(@"---- > [my user  id] = %@", myUserId);
+//	NSLog(@"---- > [my group id] = %@", myGroupId);
+//	NSLog(@"---- > [my user  id] = %@", myUserId);
 }
 
 - (void)didReceiveMemoryWarning {

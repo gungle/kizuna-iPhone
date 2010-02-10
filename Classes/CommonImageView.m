@@ -30,16 +30,16 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesBegan Image view");
+//	NSLog(@"tuchesBegan Image view");
 	[[self nextResponder] touchesBegan:touches withEvent:event];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesEnd Image view");
+//	NSLog(@"tuchesEnd Image view");
 	[[self nextResponder] touchesEnded:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"touchesMoved Image view");
+//	NSLog(@"touchesMoved Image view");
 	[[self nextResponder] touchesMoved:touches withEvent:event];
 }
 

@@ -59,7 +59,7 @@
 		// メッセージ
 	}
 	nodeName = elementName;
-	NSLog(@"----- > %@ start",elementName);
+//	NSLog(@"----- > %@ start",elementName);
 
 }
 
@@ -71,7 +71,7 @@
 	} else if ([elementName isEqualToString:ELEMENT_NAME_MESSAGE]) {
 		// メッセージ
 	}
-	NSLog(@"----- > %@ end",elementName);
+//	NSLog(@"----- > %@ end",elementName);
 }
 	
 
@@ -83,7 +83,7 @@
 	} else if ([nodeName isEqualToString:ELEMENT_NAME_MESSAGE]) {
 		// メッセージ
 	}
-	NSLog(@"----- > %@ end",nodeName);
+//	NSLog(@"----- > %@ end",nodeName);
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser
@@ -101,8 +101,8 @@
 	// ログインID、パスワード取得
 	NSString *loginId = [userDefaults stringForKey:@"login_id_preference"];
 	NSString *password = [userDefaults stringForKey:@"password_preference"];
-	NSLog(@"ログインID　= %@",loginId);
-	NSLog(@"パスワード = %@",password);
+//	NSLog(@"ログインID　= %@",loginId);
+//	NSLog(@"パスワード = %@",password);
 	
 	// グループID、ユーザID取得・設定
 	NSString *url = [[NSString alloc]initWithFormat:@"%@%@",

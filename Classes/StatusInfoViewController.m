@@ -78,7 +78,7 @@
 					 ];
 	[statusXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
 	
-	NSLog(@" url = %@", url);
+//	NSLog(@" url = %@", url);
 	[url release];
 	NSMutableArray *items = [statusXmlParser items];
 	
@@ -94,7 +94,7 @@
 
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,100,100)];
 	NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", statusInfo.iconPath];
-	NSLog(@" image path = %@", imagePath);
+//	NSLog(@" image path = %@", imagePath);
 	[asyncImageView loadImage:imagePath];
 	
 	[userIcon addSubview:asyncImageView];

@@ -48,7 +48,7 @@
 	
 	if ([locationManager locationServicesEnabled]) {
 		// ロケーションサービスが利用できる場合
-		NSLog(@"----- > ロケーションサービス利用");
+//		NSLog(@"----- > ロケーションサービス利用");
 		locationManager.delegate = self;
 		locationManager.desiredAccuracy = kCLLocationAccuracyBest; // 位置測定の望みの精度を設定
 		locationManager.distanceFilter = kCLDistanceFilterNone; // 位置情報更新の目安距離
@@ -56,7 +56,7 @@
 		[locationManager startUpdatingLocation];		
 	} else {
 		// ロケーションサービスが利用できない場合
-		NSLog(@"----- > ロケーションサービス利用不可");
+//		NSLog(@"----- > ロケーションサービス利用不可");
 	}
 }
 

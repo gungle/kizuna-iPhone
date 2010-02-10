@@ -44,8 +44,8 @@
 	// ログインID、パスワード取得
 	loginId = [userDefaults stringForKey:@"login_id_preference"];
 	NSString *password = [userDefaults stringForKey:@"password_preference"];
-	NSLog(@"ログインID　= %@",loginId);
-	NSLog(@"パスワード = %@",password);
+//	NSLog(@"ログインID　= %@",loginId);
+//	NSLog(@"パスワード = %@",password);
 
 	// indicator visible
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -62,10 +62,10 @@
 	
 	self.groupId = [loginXmlParser groupId];
 	self.userId  = [loginXmlParser userId];
-	NSLog(@"結果　　　　　= %@",[loginXmlParser result]);
-	NSLog(@"メッセージ　 = %@",[loginXmlParser message]);
-	NSLog(@"グループID　= %@",self.groupId);
-	NSLog(@"ユーザID　 = %@",self.userId);
+//	NSLog(@"結果　　　　　= %@",[loginXmlParser result]);
+//	NSLog(@"メッセージ　 = %@",[loginXmlParser message]);
+//	NSLog(@"グループID　= %@",self.groupId);
+//	NSLog(@"ユーザID　 = %@",self.userId);
 	
 	// Add the tab bar controller's current view as a subview of the window
 	[tabBarController setViewControllers:[NSArray arrayWithObjects:tweetNaviController, statusNaviController, mapNaviController, reportNaviController, userListNaviController, nil] animated:NO];

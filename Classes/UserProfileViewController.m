@@ -156,7 +156,6 @@
 }
 
 -(IBAction)pushDownMapBtn:(id)sender{
-	NSLog(@"----- >>> pushDownMapBtn");
 	MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:nil bundle:nil];
 	mapViewController.userId  = userId;
 	mapViewController.title = @"現在位置";
@@ -196,8 +195,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	NSLog(@"--- > cellForRowAtIndexPath ");
-    
     static NSString *identifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];

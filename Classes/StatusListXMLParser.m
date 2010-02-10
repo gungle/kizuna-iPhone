@@ -27,7 +27,7 @@
     if (qualifiedName) {
         elementName = qualifiedName;
     }
-	NSLog(@"----- > %@ start",elementName);
+//	NSLog(@"----- > %@ start",elementName);
 
     if ([elementName isEqualToString:ELEMENT_NAME_STATUS] && !statusFlag) {
 		// ステータス情報データ生成
@@ -54,7 +54,7 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string  
 {  
-	NSLog(@"----- > %@",string);
+//	NSLog(@"----- > %@",string);
     // エレメントの文字データを string で取得
 	if ([nodeName isEqualToString:ELEMENT_NAME_STATUS_0] && !statusFlag) {
 	} else {
@@ -96,7 +96,7 @@
         elementName = qualifiedName;
     }
 	
-	NSLog(@"----- > %@ end",elementName);
+//	NSLog(@"----- > %@ end",elementName);
     if ([elementName isEqualToString:ELEMENT_NAME_STATUS_0] && !statusFlag) {
 		[items addObject:statusInfo];
 		[statusInfo release];

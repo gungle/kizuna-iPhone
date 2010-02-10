@@ -50,7 +50,7 @@
 					 [self getProperties:@"API_KEY_USERS"],
 					 myGroupId
 					 ];
-	NSLog(@" url = %@", url);
+//	NSLog(@" url = %@", url);
 	
 	[userXmlParser parseXMLFileAtURL:[NSURL URLWithString:url] parseError:&parseError];
 	[url release];

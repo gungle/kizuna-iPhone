@@ -13,11 +13,9 @@
 @implementation MapInfoViewController
 
 @synthesize imageView;
-//@synthesize imagePath;
 
 - (id)initWithImagePath:(NSString *)path {
     if (self = [super initWithNibName:nil bundle:nil]) {
-		NSLog(@"---> initWithImagePath -- > %@", path);
 		imagePath = path;
 	}
     return self;
@@ -41,7 +39,6 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	NSLog(@"---> viewDidLoad -- > %@", imagePath);
     [super viewDidLoad];
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,320,320)];
 	[asyncImageView loadImage:imagePath];

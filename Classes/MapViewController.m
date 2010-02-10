@@ -32,7 +32,6 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	NSLog(@"--- > MapViewController > viewDidLoad ");
 	// 更新ボタン
 	UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] 
 									  initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
@@ -68,18 +67,18 @@
 	// 遷移元判定
 	if ([[self getMyTabBarTitle] isEqualToString:@"Map"]) {
 		// タブバーのマップボタンで遷移
-		NSLog(@"タブバーのマップボタンで遷移");
+//		NSLog(@"タブバーのマップボタンで遷移");
 		userId = myUserId;
 		locationFlag = TRUE;	
 	} else {
 		// ステータス詳細の位置ボタンで遷移
-		NSLog(@"ステータス詳細の位置ボタンで遷移");
+//		NSLog(@"ステータス詳細の位置ボタンで遷移");
 		if ([userId isEqualToString:myUserId]) {
 			// 自分が選択された
-			NSLog(@"自分が選択された");
+//			NSLog(@"自分が選択された");
 			locationFlag = TRUE;
 		} else {
-			NSLog(@"別のユーザが選択された");
+//			NSLog(@"別のユーザが選択された");
 			locationFlag = FALSE;
 		}
 	}
@@ -153,7 +152,7 @@
 		[userMapInfo release];
 	} else {
 		// TODO エラー
-		NSLog(@"現在位置を取得できませんでした。");
+//		NSLog(@"現在位置を取得できませんでした。");
 	}
 	
 	[url release];
@@ -163,10 +162,10 @@
 
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
 	if (alertView.numberOfButtons == 1) {
-		NSLog(@"ボタンは１つ");
+//		NSLog(@"ボタンは１つ");
 		return;
 	} else {
-		NSLog(@"ボタンは2つ以上");
+//		NSLog(@"ボタンは2つ以上");
 		if (buttonIndex == 1) {
 			// OK
 			locationFlag = TRUE;

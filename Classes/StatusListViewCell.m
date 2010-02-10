@@ -46,16 +46,16 @@
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesBegan status list cell");
+//	NSLog(@"tuchesBegan status list cell");
 	[[self nextResponder] touchesBegan:touches withEvent:event];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"tuchesEnd status list cell");
+//	NSLog(@"tuchesEnd status list cell");
 	[[self nextResponder] touchesEnded:touches withEvent:event];
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"touchesMoved status list cell");
+//	NSLog(@"touchesMoved status list cell");
 	[[self nextResponder] touchesMoved:touches withEvent:event];
 }
 
