@@ -90,9 +90,7 @@
 	status   = [[NSString alloc]initWithString:statusInfo.status];
 	position = [[NSString alloc]initWithString:statusInfo.position];
 	note     = [[NSString alloc]initWithString:statusInfo.note];
-	// TODO サーバ対応待ち
-//	publicFlag = [[NSString alloc]initWithString:statusInfo.publicFlag];
-	publicFlag = [[NSString alloc]initWithString:@"0"];	
+	publicFlag = [[NSString alloc]initWithString:statusInfo.publicFlag];
 
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,100,100)];
 	NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", statusInfo.iconPath];
