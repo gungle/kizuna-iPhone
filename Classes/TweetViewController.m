@@ -174,6 +174,10 @@
 			[viewController release];
 			
 		}
+		// remove indicator
+		for ( UIView *subView in cell.userIcon.subviews){
+			[subView removeFromSuperview];
+		}
 		
 		NSUInteger row = [indexPath row] -1;
 		TweetInfo *info = (TweetInfo *)[items objectAtIndex:row];
