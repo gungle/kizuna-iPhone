@@ -114,9 +114,11 @@
     
 	// Configure the cell.
 	int personIndex = [indexPath indexAtPosition:[indexPath length] -1];
+	UserInfo *info = [items objectAtIndex:personIndex];
 	
 	// ユーザ情報設定
 	// アイコン
+/*
 	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(2,2,48,48)];
 	NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [[items objectAtIndex:personIndex] iconPath]];
 	[asyncImageView loadImage:imagePath];
@@ -125,12 +127,36 @@
 	
 	[cell.userIcon addSubview:asyncImageView];
 	[asyncImageView release];
+*/
+	AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(2,2,48,48)];
+	if (info.imageData == nil) {
+		// first time
+		NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [info iconPath]];
+		[asyncImageView loadImage:imagePath];
+		//	 asyncImageView.tag = 1;
+		asyncImageView.indexPath = indexPath;
+		[imagePath release];
+		
+		[[NSNotificationCenter defaultCenter]
+		 addObserver: self
+		 selector: @selector(loadImageDidEnd:)
+		 name:@"nothiFyImageLoadFinish"
+		 object: asyncImageView];
+		
+	} else {
+		// over than second times
+		NSData *data = (NSData *)[info imageData];
+		asyncImageView.image = [UIImage imageWithData:data];
+		[cell.userIcon addSubview:asyncImageView];
+	}
+	[asyncImageView release];
+	
 	// 氏名
-	[cell.fullName setText:(NSString *)[[items objectAtIndex:personIndex] fullName]];
+	[cell.fullName setText:(NSString *)[info fullName]];
 	// 氏名カナ
-	[cell.fullNameKana setText:(NSString *)[[items objectAtIndex:personIndex] fullNameKana]];
+	[cell.fullNameKana setText:(NSString *)[info fullNameKana]];
 	// 住所
-	[cell.address setText:(NSString *)[[items objectAtIndex:personIndex] address]];
+	[cell.address setText:(NSString *)[info address]];
     return cell;
 }
 
@@ -148,6 +174,28 @@
 	[self.navigationController pushViewController:userProfileViewController animated:YES];
 	
 	[userProfileViewController release];
+}
+
+#pragma mark Load Image
+- (void) loadImageDidEnd: (NSNotification *)notification
+{	
+	AsyncImageView *asyncImageView = (AsyncImageView *)[notification object];
+	if (asyncImageView != nil) {
+		int personIndex = [asyncImageView.indexPath indexAtPosition:[asyncImageView.indexPath length] -1];
+		UserInfo *info = (UserInfo *)[items objectAtIndex:personIndex];
+		info.imageData = [[NSMutableData alloc]initWithCapacity:0];
+		info.imageData =  asyncImageView.imageData;
+		UserListViewCell *cell = (UserListViewCell *)[self.tblView cellForRowAtIndexPath: asyncImageView.indexPath];
+		if (cell != nil) {
+			/*　アイコンにインディケータを表示した場合
+			 // remove indicator
+			 for ( UIView *subView in cell.userIcon.subviews){
+			 [subView removeFromSuperview];
+			 }
+			 */
+			[cell.userIcon addSubview:asyncImageView];
+		}
+	}	
 }
 
 @end
