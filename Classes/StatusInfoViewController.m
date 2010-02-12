@@ -168,7 +168,10 @@
 // セクション数
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida START
+//    return 3;
+    return 2;
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida END
 }
 
 // 行数
@@ -179,7 +182,10 @@
 // セルの高さ変更
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	CGFloat height = 25;
-	if (indexPath.section == 2) {
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida START
+//	if (indexPath.section == 2) {
+	if (indexPath.section == 1) {
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida END
 		// その他の情報
 		height = 150;
 	}
@@ -189,7 +195,10 @@
 // セルの表示
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-	if (indexPath.section == 2) {
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida START
+	//	if (indexPath.section == 2) {
+	if (indexPath.section == 1) {
+	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida END
 		static NSString *CellIdentifier = @"StatusInfoViewCell";
 		StatusInfoViewCell *cell = (StatusInfoViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 		if (cell == nil) {
