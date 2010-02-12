@@ -53,7 +53,7 @@
 	didUpdateToLocation:(CLLocation *)newLocation
 		   fromLocation:(CLLocation *)oldLocation
 {
-	NSLog(@"---> ReportViewController > locationManager");
+//	NSLog(@"---> ReportViewController > locationManager");
 	// 位置情報を取り出す
 	location.latitude  = newLocation.coordinate.latitude;
 	location.longitude = newLocation.coordinate.longitude;
@@ -69,7 +69,11 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return 4;
+	//-- MOD 2010.02.12 立場報告機能クローズ START
+//	return 4;
+ 
+	return 3;
+	//-- MOD 2010.02.12 立場報告機能クローズ END
 }
 
 // Customize the appearance of table view cells.
@@ -84,6 +88,8 @@
     }
     
 	int personIndex = [indexPath indexAtPosition:[indexPath length] -1];
+	//-- MOD 2010.02.12 立場報告機能クローズ START
+	/*
 	switch (personIndex) {
 		case 0:
 			// 現在の状況
@@ -102,6 +108,22 @@
 			cell.textLabel.text = @"その他の情報";
 			break;
 	}
+	*/
+	switch (personIndex) {
+		case 0:
+			// 現在の状況
+			cell.textLabel.text = @"現在の状況";
+			break;
+		case 1:
+			// 現在の位置
+			cell.textLabel.text = @"現在の位置";
+			break;
+		default:
+			// その他の情報
+			cell.textLabel.text = @"その他の情報";
+			break;
+	}
+	//-- MOD 2010.02.12 立場報告機能クローズ END
 	
     return cell;
 }
@@ -119,6 +141,8 @@
 	StatusReportViewController   *statusViewController;
 	PositionReportViewController *positionViewController;
 	NoteReportViewController     *noteViewController;
+	//-- MOD 2010.02.12 立場報告機能クローズ START
+	/*
 	switch (personIndex) {
 		case 0:
 			// 現在の状況
@@ -152,6 +176,32 @@
 			[noteViewController release];
 			break;
 	}
+	*/
+	switch (personIndex) {
+		case 0:
+			// 現在の状況
+			statusViewController = [[StatusReportViewController alloc] initWithNibName:nil bundle:nil];
+			statusViewController.title = @"現在の状況";
+			statusViewController.reportTitle = @"現在の状況";
+			statusViewController.userId = userId;
+			[self.navigationController pushViewController:statusViewController animated:YES];
+			[statusViewController release];
+			break;
+		case 1:
+			// 現在位置取得確認
+			[self confirmGetLocation];		
+			break;
+		default:
+			// その他の情報
+			noteViewController = [[NoteReportViewController alloc] initWithNibName:nil bundle:nil];
+			noteViewController.title = @"その他の情報";
+			noteViewController.reportTitle = @"その他の情報";
+			noteViewController.userId = userId;
+			[self.navigationController pushViewController:noteViewController animated:YES];
+			[noteViewController release];
+			break;
+	}
+	//-- MOD 2010.02.12 立場報告機能クローズ START
 }
 
 - (void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -177,7 +227,7 @@
 					 [self getProperties:@"SERVER"], 
 					 [self getProperties:@"API_KEY_REPORT_STATUS"],
 					 userId];
-	NSLog(@"-- >> url = %@",url);
+//	NSLog(@"-- >> url = %@",url);
 	
 	NSMutableURLRequest *request = [[[NSMutableURLRequest alloc] init] autorelease];	
 	[request setURL:[NSURL URLWithString:url]];
@@ -197,14 +247,14 @@
 - (void)connection:(NSURLConnection*)connection
 	didReceiveData:(NSData*)data
 {
-	NSLog(@"---- >>> connection start");
+//	NSLog(@"---- >>> connection start");
 	char* p = (char*)[data bytes];
 	int len = [data length];
 	while (len-- > 0) {
 		putchar(*p++);
 	}
-	NSLog(@"---- >>> %c", *p);
-	NSLog(@"---- >>> connection end");
+//	NSLog(@"---- >>> %c", *p);
+//	NSLog(@"---- >>> connection end");
 
 	[self alertView:@"報告完了" message:@"現在位置の報告が完了しました。" okBtnName:@"OK"];
 }
