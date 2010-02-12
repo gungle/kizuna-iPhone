@@ -174,7 +174,7 @@
 			[viewController release];
 			
 		}
-		// remove indicator
+		// remove subView
 		for ( UIView *subView in cell.userIcon.subviews){
 			[subView removeFromSuperview];
 		}
