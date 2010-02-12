@@ -180,8 +180,7 @@
 		AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,48,48)];
 		NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [[items objectAtIndex:row] iconPath]];
 		[asyncImageView loadImage:imagePath];
-		//	[asyncImageView loadImage:@"http://weather.livedoor.com/img/icon/1.gif"];
-		//	asyncImageView.tag = 1;
+
 		[cell. iconPath addSubview:asyncImageView];
 		[asyncImageView release];
 		
@@ -206,7 +205,7 @@
 		TweetViewController *listController = [[TweetViewController alloc] initWithNibName:@"TweetViewController" bundle:nil];
 		
 		// タイトルバー変更
-		listController.title = @"発言一覧";		// 何階層目か、わかるようにする★
+		listController.title = @"緊急連絡一覧";		// 何階層目か、わかるようにする★
 		
 		// パラメタを引き継ぐ
 		NSUInteger row = [indexPath row] -1;
