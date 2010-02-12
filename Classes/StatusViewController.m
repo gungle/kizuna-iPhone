@@ -192,7 +192,7 @@
 	int personIndex = [indexPath indexAtPosition:[indexPath length] -1];
 	StatusInfo *info = [items objectAtIndex:personIndex];
 	StatusInfoViewController *statusInfoViewController = [[StatusInfoViewController alloc] initWithNibName:nil bundle:nil];
-	statusInfoViewController.title = @"ステータス詳細";
+	statusInfoViewController.title = @"状況詳細";
 
 	// 選択されたユーザのグループIDとユーザIDを設定
 	statusInfoViewController.userId = info.userId;

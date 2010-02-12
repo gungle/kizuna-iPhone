@@ -79,7 +79,7 @@
 							<string key="IBUITitle">userlist</string>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="691329133">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">平常時</string>
+								<string key="IBUITitle">ユーザ一覧</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="721838956"/>
 							<string key="IBUINibName">UserViewController</string>
@@ -146,7 +146,7 @@
 							<object class="IBUIViewController" id="215848631">
 								<reference key="IBUIToolbarItems" ref="0"/>
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="828678621">
-									<string key="IBUITitle">緊急連絡</string>
+									<string key="IBUITitle">緊急連絡一覧</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="898301416"/>
 								<string key="IBUINibName">TweetViewController</string>
