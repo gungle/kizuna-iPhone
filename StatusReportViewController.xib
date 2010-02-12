@@ -55,7 +55,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">避難済</string>
+						<string key="IBUINormalTitle">安否不明</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="282111172">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -80,7 +80,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">避難中</string>
+						<string key="IBUINormalTitle">ケ ガ</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -91,7 +91,7 @@
 					<object class="IBUIButton" id="960358030">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 192}, {280, 75}}</string>
+						<string key="NSFrame">{{20, 190}, {280, 75}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -99,7 +99,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">ヘルプ</string>
+						<string key="IBUINormalTitle">閉じ込み</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -118,7 +118,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">救助活動中</string>
+						<string key="IBUINormalTitle">死 亡</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -225,9 +225,9 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="958816544"/>
-							<reference ref="321836634"/>
 							<reference ref="1055817321"/>
 							<reference ref="960358030"/>
+							<reference ref="321836634"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -281,7 +281,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>StatusReportViewController</string>
 					<string>UIResponder</string>
-					<string>{{686, 244}, {320, 480}}</string>
+					<string>{{472, 324}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -305,7 +305,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">22</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

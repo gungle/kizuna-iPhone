@@ -29,19 +29,19 @@
 
 
 -(IBAction)pushDownStatusBtn01:(id)sender{
-	// 避難済
+	// 避難済 → 安否不明
 	[self report:@"status" value:@"1"];
 }
 -(IBAction)pushDownStatusBtn02:(id)sender{
-	// 避難中
+	// 避難中 → ケガ
 	[self report:@"status" value:@"2"];
 }
 -(IBAction)pushDownStatusBtn03:(id)sender{
-	// ヘルプ
+	// ヘルプ → 閉じ込み
 	[self report:@"status" value:@"3"];
 }
 -(IBAction)pushDownStatusBtn04:(id)sender{
-	// 救助活動中
+	// 救助活動中 → 死亡
 	[self report:@"status" value:@"4"];
 }
 
