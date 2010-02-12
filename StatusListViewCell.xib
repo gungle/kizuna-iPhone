@@ -102,7 +102,7 @@
 							</object>
 							<object class="IBUILabel" id="979235741">
 								<reference key="NSNextResponder" ref="306359299"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">-2147483356</int>
 								<string key="NSFrame">{{168, 19}, {100, 22}}</string>
 								<reference key="NSSuperview" ref="306359299"/>
 								<reference key="IBUIBackgroundColor" ref="992924222"/>
@@ -253,9 +253,9 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="848065819"/>
 							<reference ref="759908313"/>
-							<reference ref="979235741"/>
 							<reference ref="321591827"/>
 							<reference ref="68581835"/>
+							<reference ref="979235741"/>
 						</object>
 						<reference key="parent" ref="0"/>
 						<string key="objectName">Status List View Cell (UserListViewCell)</string>
