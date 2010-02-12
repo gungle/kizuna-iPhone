@@ -23,6 +23,7 @@
 @synthesize picturePath;
 @synthesize createdAt;
 @synthesize updatedAt;
+@synthesize imageData;
 
 
 - (void)dealloc {
@@ -38,6 +39,7 @@
 	[picturePath    release];
 	[createdAt      release];
 	[updatedAt      release];
+	[imageData      release];
 	[super        dealloc];
 }
 @end

@@ -68,6 +68,7 @@
 		2BA4C8D910C8A7C3005CE0C5 /* TweetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA4C8D810C8A7C3005CE0C5 /* TweetViewController.xib */; };
 		2BA4C90A10C8AB1A005CE0C5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA4C90910C8AB1A005CE0C5 /* CoreLocation.framework */; };
 		2BA4C90C10C8AB1A005CE0C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BA4C90B10C8AB1A005CE0C5 /* MapKit.framework */; };
+		2BBB026F11254FF50088DAA9 /* TweetListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBB026E11254FF50088DAA9 /* TweetListViewController.m */; };
 		2BCCFB5E10D9B9D80041024E /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCCFB5D10D9B9D80041024E /* LocationViewController.m */; };
 		B365477410E90003005E7B02 /* TweetListXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B365477310E90003005E7B02 /* TweetListXMLParser.m */; };
 		B365477710E90013005E7B02 /* TweetInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B365477610E90013005E7B02 /* TweetInfo.m */; };
@@ -173,6 +174,8 @@
 		2BA4C8D810C8A7C3005CE0C5 /* TweetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetViewController.xib; sourceTree = "<group>"; };
 		2BA4C90910C8AB1A005CE0C5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2BA4C90B10C8AB1A005CE0C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2BBB026D11254FF50088DAA9 /* TweetListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetListViewController.h; sourceTree = "<group>"; };
+		2BBB026E11254FF50088DAA9 /* TweetListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetListViewController.m; sourceTree = "<group>"; };
 		2BCCFB5C10D9B9D80041024E /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		2BCCFB5D10D9B9D80041024E /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* SCOPEProject-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SCOPEProject-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				B36547D110E90399005E7B02 /* TweetInputController.m */,
 				B365478010E9004E005E7B02 /* TweetViewController.h */,
 				B365478110E9004E005E7B02 /* TweetViewController.m */,
+				2BBB026D11254FF50088DAA9 /* TweetListViewController.h */,
+				2BBB026E11254FF50088DAA9 /* TweetListViewController.m */,
 			);
 			name = tweet;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 				2B03115510F319A9001FBDC9 /* UserListViewCell.m in Sources */,
 				2B03115E10F31BFE001FBDC9 /* UserListViewController.m in Sources */,
 				2B8F5DD810F59D9E00A7192A /* MapInfoViewController.m in Sources */,
+				2BBB026F11254FF50088DAA9 /* TweetListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

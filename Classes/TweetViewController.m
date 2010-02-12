@@ -11,6 +11,7 @@
 #import "TweetInputController.h"
 #import "TweetInfo.h"
 #import "AsyncImageView.h"
+#import "TweetListViewController.h"
 
 @implementation TweetViewController
 @synthesize tweetXMLParser;
@@ -139,7 +140,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	return [items count] + 1;	
+	return [items count] + 1;
 }
 
 // Customize the appearance of table view cells.
@@ -160,28 +161,55 @@
 		
 		return cell;
 	}else{
-		static NSString *TweetListCellIdentifier = @"TweetListCellIdentifier";
+		
+		static NSString *TweetListCellIdentifier = @"TweetListCell";
 	
 		TweetListCell *cell = (TweetListCell *)[tableView dequeueReusableCellWithIdentifier:TweetListCellIdentifier];
 		
 		if (cell == nil) {
-			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TweetListCell" owner:self options:nil];
-			cell = [nib objectAtIndex:0];
+//			NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TweetListCell" owner:self options:nil];
+//			cell = [nib objectAtIndex:0];
+			TweetListViewController *viewController = [[TweetListViewController alloc]initWithNibName:TweetListCellIdentifier bundle:nil];
+			cell = (TweetListCell *)viewController.view;
+			[viewController release];
 			
 		}
 		
 		NSUInteger row = [indexPath row] -1;
+		TweetInfo *info = (TweetInfo *)[items objectAtIndex:row];
 		
-		cell.fullName.text = [[items objectAtIndex:row] fullName];
-		cell.tweet.text = [[items objectAtIndex:row] tweet];
-		cell.updatedAt.text = [[items objectAtIndex:row] updatedAt];
+		cell.fullName.text = [info fullName];
+		cell.tweet.text = [info tweet];
+		cell.updatedAt.text = [info updatedAt];
 		
 		// アイコン
+/*
 		AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,48,48)];
 		NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [[items objectAtIndex:row] iconPath]];
 		[asyncImageView loadImage:imagePath];
 
 		[cell. iconPath addSubview:asyncImageView];
+		[asyncImageView release];
+*/
+		AsyncImageView *asyncImageView =[[AsyncImageView alloc] initWithFrame:CGRectMake(0,0,48,48)];
+		if (info.imageData == nil) {
+			NSString *imagePath = [[NSString alloc] initWithFormat:@"%@", [info iconPath]];
+			[asyncImageView loadImage:imagePath];
+			asyncImageView.indexPath = indexPath;
+			[imagePath release];
+			
+			[[NSNotificationCenter defaultCenter]
+			 addObserver: self
+			 selector: @selector(loadImageDidEnd:)
+			 name:@"nothiFyImageLoadFinish"
+			 object: asyncImageView];
+			
+		} else {
+			// over than second times
+			NSData *data = (NSData *)[info imageData];
+			asyncImageView.image = [UIImage imageWithData:data];
+			[cell.userIcon addSubview:asyncImageView];
+		}
 		[asyncImageView release];
 		
 		return cell;
@@ -190,8 +218,8 @@
 
 // Override to support row selection in the table view.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	
-	NSLog(@"------- start. didSelectRowAtIndexPath");
+
+//	NSLog(@"------- start. didSelectRowAtIndexPath");
 	
 	if (indexPath.row == 0) {
 		[self requestTweetList];
@@ -217,7 +245,7 @@
 		
 	}
 	
-	NSLog(@"------- end. didSelectRowAtIndexPath");
+//	NSLog(@"------- end. didSelectRowAtIndexPath");
 	
 }
 
@@ -233,6 +261,22 @@
 
 	
 
+}
+
+#pragma mark Load Image
+- (void) loadImageDidEnd: (NSNotification *)notification
+{	
+	AsyncImageView *asyncImageView = (AsyncImageView *)[notification object];
+	if (asyncImageView != nil) {
+		NSUInteger row = [asyncImageView.indexPath row] -1;
+		TweetInfo *info = (TweetInfo *)[items objectAtIndex:row];
+		info.imageData = [[NSMutableData alloc]initWithCapacity:0];
+		info.imageData =  asyncImageView.imageData;
+		TweetListCell *cell = (TweetListCell *)[self.tweetList cellForRowAtIndexPath: asyncImageView.indexPath];
+		if (cell != nil) {
+			[cell.userIcon addSubview:asyncImageView];
+		}
+	}	
 }
 
 

@@ -12,12 +12,13 @@
 @implementation TweetListCell
 
 @synthesize fullName;			// 本名
-@synthesize iconPath;			// アイコン (URL)
+//@synthesize iconPath;			// アイコン (URL)
 @synthesize tweet;				// つぶやき
 @synthesize tweetLat;			// 位置情報 緯度
 @synthesize tweetLon;			// 位置情報 経度
-@synthesize picturePath;		// 写真へのPATH (URL)
+//@synthesize picturePath;		// 写真へのPATH (URL)
 @synthesize updatedAt;			// 最終更新日時
+@synthesize userIcon;			// アイコン
 
 
 
@@ -38,6 +39,7 @@
 
 
 - (void)dealloc {
+	[userIcon release];
     [super dealloc];
 }
 

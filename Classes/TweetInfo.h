@@ -22,6 +22,7 @@
 	NSString *picturePath;		// 写真へのPATH (URL)
 	NSString *createdAt;		// 作成日時
 	NSString *updatedAt;		// 最終更新日時
+	NSMutableData *imageData;
 }
 
 @property (nonatomic, retain) NSString *tweetId;
@@ -36,5 +37,6 @@
 @property (nonatomic, retain) NSString *picturePath;
 @property (nonatomic, retain) NSString *createdAt;
 @property (nonatomic, retain) NSString *updatedAt;
+@property (nonatomic, retain) NSMutableData *imageData;
 
 @end
