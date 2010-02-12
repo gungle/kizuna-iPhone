@@ -56,7 +56,7 @@
 				<object class="IBUINavigationController" key="IBUISelectedViewController" id="721838956">
 					<string key="IBUITitle">UserList</string>
 					<object class="IBUITabBarItem" key="IBUITabBarItem" id="297167332">
-						<string key="IBUITitle">ユーザ</string>
+						<string key="IBUITitle">平常時</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">users.png</string>
@@ -79,7 +79,7 @@
 							<string key="IBUITitle">userlist</string>
 							<object class="IBUINavigationItem" key="IBUINavigationItem" id="691329133">
 								<reference key="IBUINavigationBar"/>
-								<string key="IBUITitle">ユーザ一覧</string>
+								<string key="IBUITitle">平常時</string>
 							</object>
 							<reference key="IBUIParentViewController" ref="721838956"/>
 							<string key="IBUINibName">UserViewController</string>
@@ -124,7 +124,7 @@
 					<object class="IBUINavigationController" id="898301416">
 						<string key="IBUITitle">Tweet</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="674896851">
-							<string key="IBUITitle">つぶやき</string>
+							<string key="IBUITitle">緊急連絡</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">tweet.png</string>
@@ -146,7 +146,7 @@
 							<object class="IBUIViewController" id="215848631">
 								<reference key="IBUIToolbarItems" ref="0"/>
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="828678621">
-									<string key="IBUITitle">つぶやき一覧</string>
+									<string key="IBUITitle">緊急連絡</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="898301416"/>
 								<string key="IBUINibName">TweetViewController</string>
@@ -156,7 +156,7 @@
 					<object class="IBUINavigationController" id="716883416">
 						<string key="IBUITitle">Status</string>
 						<object class="IBUITabBarItem" key="IBUITabBarItem" id="826059496">
-							<string key="IBUITitle">ステータス</string>
+							<string key="IBUITitle">状況一覧</string>
 							<object class="NSCustomResource" key="IBUIImage">
 								<string key="NSClassName">NSImage</string>
 								<string key="NSResourceName">status.png</string>
@@ -179,7 +179,7 @@
 							<object class="IBUIViewController" id="751930829">
 								<string key="IBUITitle">status</string>
 								<object class="IBUINavigationItem" key="IBUINavigationItem" id="602438987">
-									<string key="IBUITitle">ステータス一覧</string>
+									<string key="IBUITitle">状況一覧</string>
 								</object>
 								<reference key="IBUIParentViewController" ref="716883416"/>
 								<string key="IBUINibName">StatusViewController</string>
