@@ -80,7 +80,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">ケ ガ</string>
+						<string key="IBUINormalTitle">大ケ ガ</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -99,7 +99,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">閉じ込み</string>
+						<string key="IBUINormalTitle">閉じ込め</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -118,7 +118,7 @@
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<reference key="IBUIFont" ref="540868164"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">死 亡</string>
+						<string key="IBUINormalTitle">意識不明</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
