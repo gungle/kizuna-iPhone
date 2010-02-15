@@ -85,6 +85,8 @@
 			[userInfo setAddress:nodeContent];
 		} else if ([elementName isEqualToString:ELEMENT_NAME_BIRTHDAY]) {
 			[userInfo setBirthday:nodeContent];
+		} else if ([elementName isEqualToString:ELEMENT_NAME_AGE]) {
+			[userInfo setAge:nodeContent];
 		} else if ([elementName isEqualToString:ELEMENT_NAME_SEX]) {
 			[userInfo setSex:nodeContent];
 		} else if ([elementName isEqualToString:ELEMENT_NAME_BLOOD]) {

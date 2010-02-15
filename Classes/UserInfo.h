@@ -17,6 +17,7 @@
 	NSString *fullNameKana;		// ユーザ名カナ
 	NSString *address;			// 住所
 	NSString *birthday;			// 誕生日
+	NSString *age;				// 年齢
 	NSString *sex;				// 性別
 	NSString *blood;			// 血液型
 	NSString *tel;				// 電話番号
@@ -38,6 +39,7 @@
 @property (nonatomic, retain) NSString *fullNameKana;
 @property (nonatomic, retain) NSString *address;
 @property (nonatomic, retain) NSString *birthday;
+@property (nonatomic, retain) NSString *age;
 @property (nonatomic, retain) NSString *sex;
 @property (nonatomic, retain) NSString *blood;
 @property (nonatomic, retain) NSString *tel;

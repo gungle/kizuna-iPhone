@@ -18,6 +18,7 @@
 @synthesize fullNameKana;
 @synthesize address;
 @synthesize birthday;
+@synthesize age;
 @synthesize sex;
 @synthesize blood;
 @synthesize tel;
@@ -38,6 +39,7 @@
 	[fullNameKana   release];
 	[address        release];
 	[birthday       release];
+	[age            release];
 	[sex            release];
 	[blood          release];
 	[tel            release];

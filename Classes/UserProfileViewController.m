@@ -97,8 +97,10 @@
 	fullNameKana.text = userInfo.fullNameKana;
 	[groupValue1 addObject:userInfo.tel];
 	[groupValue1 addObject:userInfo.mail];
-	[groupValue1 addObject:userInfo.address];
-	[groupValue2 addObject:userInfo.birthday];
+	[groupValue1 addObject:userInfo.address];	
+//	[groupValue2 addObject:userInfo.birthday];
+	NSString *birthdayage = [[NSString alloc]initWithFormat:@"%@ (%@才)",userInfo.birthday,userInfo.age];
+	[groupValue2 addObject:birthdayage];
 	[groupValue2 addObject:userInfo.sex];
 	[groupValue2 addObject:userInfo.blood];
 	[groupValue3 addObject:userInfo.job];

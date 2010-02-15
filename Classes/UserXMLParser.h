@@ -18,6 +18,7 @@
 #define ELEMENT_NAME_FULL_NAME_KANA  @"full_name_kana"
 #define ELEMENT_NAME_ADDRESS         @"address"
 #define ELEMENT_NAME_BIRTHDAY        @"birthday"
+#define ELEMENT_NAME_AGE             @"age"
 #define ELEMENT_NAME_SEX             @"sex"
 #define ELEMENT_NAME_BLOOD           @"blood"
 #define ELEMENT_NAME_TEL             @"tel"
