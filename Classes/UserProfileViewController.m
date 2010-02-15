@@ -208,17 +208,36 @@
 		case 0:
 			cell.textLabel.text = [groupName1 objectAtIndex:indexPath.row];
 			cell.detailTextLabel.text= [groupValue1 objectAtIndex:indexPath.row];
+			cell.detailTextLabel.numberOfLines = 1;
 			break;
 		case 1:
 			cell.textLabel.text = [groupName2 objectAtIndex:indexPath.row];
 			cell.detailTextLabel.text = [groupValue2 objectAtIndex:indexPath.row];
+			cell.detailTextLabel.numberOfLines = 1;
 			break;
 		default:
 			cell.textLabel.text = [groupName3 objectAtIndex:indexPath.row];
 			cell.detailTextLabel.text = [groupValue3 objectAtIndex:indexPath.row];
+			cell.detailTextLabel.numberOfLines = 4;
 			break;
 	}
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *) tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath {
+	CGFloat cellHeight;
+	switch (indexPath.section) {
+		case 0:
+			cellHeight = 22;
+			break;
+		case 1:
+			cellHeight = 22;
+			break;
+		default:
+			cellHeight = 80;
+			break;
+	}
+    return cellHeight;
 }
 
 
