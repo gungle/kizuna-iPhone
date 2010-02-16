@@ -10,6 +10,7 @@
 
 @implementation StatusReportViewController
 
+@synthesize statusBtn00;
 @synthesize statusBtn01;
 @synthesize statusBtn02;
 @synthesize statusBtn03;
@@ -28,24 +29,29 @@
 }
 
 
+-(IBAction)pushDownStatusBtn00:(id)sender{
+	// 取り消し
+	[self report:@"status" value:@"0"];
+}
 -(IBAction)pushDownStatusBtn01:(id)sender{
 	// 避難済 → 安否不明
 	[self report:@"status" value:@"1"];
 }
 -(IBAction)pushDownStatusBtn02:(id)sender{
-	// 避難中 → ケガ
+	// 大ケガ
 	[self report:@"status" value:@"2"];
 }
 -(IBAction)pushDownStatusBtn03:(id)sender{
-	// ヘルプ → 閉じ込み
+	// 閉じ込み
 	[self report:@"status" value:@"3"];
 }
 -(IBAction)pushDownStatusBtn04:(id)sender{
-	// 救助活動中 → 死亡
+	// 意識不明
 	[self report:@"status" value:@"4"];
 }
 
 - (void)dealloc {
+	[statusBtn00 release];
 	[statusBtn01 release];
 	[statusBtn02 release];
 	[statusBtn03 release];

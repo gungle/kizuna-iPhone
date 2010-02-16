@@ -43,15 +43,15 @@
 					<object class="IBUIButton" id="958816544">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 20}, {280, 75}}</string>
+						<string key="NSFrame">{{30, 8}, {260, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<object class="NSFont" key="IBUIFont" id="540868164">
+						<object class="NSFont" key="IBUIFont" id="488048418">
 							<string key="NSName">Helvetica-Bold</string>
-							<double key="NSSize">48</double>
+							<double key="NSSize">36</double>
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
@@ -72,15 +72,15 @@
 					<object class="IBUIButton" id="321836634">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 105}, {280, 75}}</string>
+						<string key="NSFrame">{{30, 78}, {260, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="540868164"/>
+						<reference key="IBUIFont" ref="488048418"/>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">大ケ ガ</string>
+						<string key="IBUINormalTitle">大ケガ</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -91,13 +91,13 @@
 					<object class="IBUIButton" id="960358030">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 190}, {280, 75}}</string>
+						<string key="NSFrame">{{30, 148}, {260, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="540868164"/>
+						<reference key="IBUIFont" ref="488048418"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">閉じ込め</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
@@ -110,15 +110,34 @@
 					<object class="IBUIButton" id="1055817321">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 275}, {280, 75}}</string>
+						<string key="NSFrame">{{30, 218}, {260, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="540868164"/>
+						<reference key="IBUIFont" ref="488048418"/>
 						<int key="IBUIButtonType">1</int>
 						<string key="IBUINormalTitle">意識不明</string>
+						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="321147646"/>
+					</object>
+					<object class="IBUIButton" id="1009148787">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{30, 288}, {260, 55}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<reference key="IBUIFont" ref="488048418"/>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">取り消し</string>
 						<reference key="IBUIHighlightedTitleColor" ref="282111172"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -218,6 +237,23 @@
 					</object>
 					<int key="connectionID">23</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">pushDownStatusBtn00:</string>
+						<reference key="source" ref="1009148787"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">1</int>
+					</object>
+					<int key="connectionID">26</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">statusBtn00</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1009148787"/>
+					</object>
+					<int key="connectionID">27</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -233,10 +269,11 @@
 						<reference key="object" ref="191373211"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="958816544"/>
 							<reference ref="1055817321"/>
-							<reference ref="960358030"/>
+							<reference ref="1009148787"/>
+							<reference ref="958816544"/>
 							<reference ref="321836634"/>
+							<reference ref="960358030"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -271,6 +308,11 @@
 						<reference key="object" ref="1055817321"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="1009148787"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -281,6 +323,7 @@
 					<string>-2.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
+					<string>24.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
@@ -291,6 +334,7 @@
 					<string>StatusReportViewController</string>
 					<string>UIResponder</string>
 					<string>{{472, 324}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -314,7 +358,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">23</int>
+			<int key="maxID">27</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -342,6 +386,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>pushDownStatusBtn00:</string>
 							<string>pushDownStatusBtn01:</string>
 							<string>pushDownStatusBtn02:</string>
 							<string>pushDownStatusBtn03:</string>
@@ -353,12 +398,14 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>statusBtn00</string>
 							<string>statusBtn01</string>
 							<string>statusBtn02</string>
 							<string>statusBtn03</string>
@@ -366,6 +413,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
