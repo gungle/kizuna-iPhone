@@ -186,10 +186,22 @@
 //	if (indexPath.section == 2) {
 	if (indexPath.section == 1) {
 	//--- MOD 2010.02.12 状況詳細画面 立場非表示対応 yoshida END
-		// その他の情報
+		// その他の情報　→　詳しい情報
 		height = 150;
 	}
 	return height;
+}
+
+// セクションのヘッダ
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	NSString *headerTitle;
+	if (section == 0) {
+		headerTitle = @"";
+	} else {
+		headerTitle = @"詳しい情報";
+	}
+
+	return headerTitle;
 }
 
 // セルの表示
