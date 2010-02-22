@@ -104,8 +104,8 @@
 			cell.textLabel.text = @"現在の位置";
 			break;
 		default:
-			// その他の情報
-			cell.textLabel.text = @"その他の情報";
+			// その他の情報　→　詳しい情報
+			cell.textLabel.text = @"詳しい情報";
 			break;
 	}
 	*/
@@ -119,8 +119,8 @@
 			cell.textLabel.text = @"現在の位置";
 			break;
 		default:
-			// その他の情報
-			cell.textLabel.text = @"その他の情報";
+			// その他の情報　→　詳しい情報
+			cell.textLabel.text = @"詳しい情報";
 			break;
 	}
 	//-- MOD 2010.02.12 立場報告機能クローズ END
@@ -167,10 +167,10 @@
 			[self confirmGetLocation];		
 			break;
 		default:
-			// その他の情報
+			// その他の情報　→　詳しい情報
 			noteViewController = [[NoteReportViewController alloc] initWithNibName:nil bundle:nil];
-			noteViewController.title = @"その他の情報";
-			noteViewController.reportTitle = @"その他の情報";
+			noteViewController.title = @"詳しい情報";
+			noteViewController.reportTitle = @"詳しい情報";
 			noteViewController.userId = userId;
 			[self.navigationController pushViewController:noteViewController animated:YES];
 			[noteViewController release];
@@ -192,10 +192,10 @@
 			[self confirmGetLocation];		
 			break;
 		default:
-			// その他の情報
+			// その他の情報　→　詳しい情報
 			noteViewController = [[NoteReportViewController alloc] initWithNibName:nil bundle:nil];
-			noteViewController.title = @"その他の情報";
-			noteViewController.reportTitle = @"その他の情報";
+			noteViewController.title = @"詳しい情報";
+			noteViewController.reportTitle = @"詳しい情報";
 			noteViewController.userId = userId;
 			[self.navigationController pushViewController:noteViewController animated:YES];
 			[noteViewController release];
